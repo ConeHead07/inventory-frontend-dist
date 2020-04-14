@@ -900,7 +900,7 @@
       constructor(http) {
         this.http = http;
         this.apiBaseUrl = ':8040/';
-        const originDomain = window && window.location && window.location.origin ? window.location.origin : 'http://127.0.0.1';
+        const originDomain = window && window.location && window.location.origin ? window.location.origin.split(':').slice(0, 2).join(':') : 'http://127.0.0.1';
         this.apiBaseUrl = originDomain + this.apiBaseUrl;
       }
 
@@ -1399,14 +1399,20 @@
       ngOnInit() {}
 
       onLoginSubmit() {
-        console.log('onLoginSubmit', this.form);
+        console.log('onLoginSubmit #32', this.form);
         let authObs;
         let url = '';
         const email = this.form.email;
         const password = this.form.password;
-        const originDomain = window && window.location && window.location.origin ? window.location.origin : 'http://127.0.0.1';
+        const originDomain = window && window.location && window.location.origin ? window.location.origin.split(':').slice(0, 2).join(':') : 'http://127.0.0.1';
         url = originDomain + ':8040/auth/login/';
+        console.log('onLoginSubmit #44', {
+          url
+        });
         authObs = this.authService.login(email, password);
+        console.log('onLoginSubmit #47', {
+          url
+        });
         this.isLoading = true;
         authObs.subscribe(resData => {
           console.log(resData);
@@ -1418,6 +1424,9 @@
           console.log(errorMessage);
           this.error = errorMessage;
           this.isLoading = false;
+        });
+        console.log('onLoginSubmit #63', {
+          url
         });
       }
 
@@ -1511,11 +1520,19 @@
         this.router = router;
         this.user = null;
         this.url = ':8040/auth/login/';
-        const originDomain = window && window.location && window.location.origin ? window.location.origin : 'http://127.0.0.1';
+        console.log('#29 AuthService.constructor', 'this.url: ', this.url);
+        const originDomain = window && window.location && window.location.origin ? window.location.origin.split(':').slice(0, 2).join(':') : 'http://127.0.0.1';
         this.url = originDomain + this.url;
+        console.log('#34 AuthService.constructor', {
+          originDomain
+        }, 'this.url: ', this.url);
       }
 
       login(email, password) {
+        console.log('#37 AuthService.login', {
+          email,
+          password
+        }, 'this.url: ', this.url);
         return this.http.post(this.url, {
           email,
           password,
@@ -5182,7 +5199,7 @@
       }
 
       mkRequest() {
-        const originDomain = window && window.location && window.location.origin ? window.location.origin : 'http://127.0.0.1';
+        const originDomain = window && window.location && window.location.origin ? window.location.origin.split(':').slice(0, 2).join(':') : 'http://127.0.0.1';
         this.http.get(originDomain + ':8040/auth/me').subscribe(data => console.log(data));
       }
 
