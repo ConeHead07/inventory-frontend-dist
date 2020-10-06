@@ -621,9 +621,6 @@ licenses; we recommend you read them, as their terms may differ from the
 terms above.
 
 
-ng-connection-service
-MIT
-
 ngx-toastr
 MIT
 The MIT License (MIT)
