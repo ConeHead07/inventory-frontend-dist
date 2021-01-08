@@ -10,9 +10,20 @@
   <meta name="theme-color" content="#1976d2">
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#1976d2">
+  <script>
+    ;(function () {
+      var src = '//cdn.jsdelivr.net/npm/eruda';
+      if (!/eruda=true/.test(window.location.hash)) {
+        console.log('If you want to enable eruda mobile-console set location.hash #eruda=true');
+        return;
+      }
+      document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+      document.write('<scr' + 'ipt>eruda.init();</scr' + 'ipt>');
+    })();
+  </script>
 <link rel="stylesheet" href="styles.a3eb714f9fe460fcf122.css"></head>
 <body>
   <app-root></app-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
-<script src="runtime-es2015.528eac4c059023231e5e.js" type="module"></script><script src="runtime-es5.528eac4c059023231e5e.js" nomodule defer></script><script src="polyfills-es5.4f39b8044fe60aac5d2e.js" nomodule defer></script><script src="polyfills-es2015.e04c183f50820e591f59.js" type="module"></script><script src="main-es2015.7ca6ac2cd2d3afe8f2b8.js" type="module"></script><script src="main-es5.7ca6ac2cd2d3afe8f2b8.js" nomodule defer></script></body>
+<script src="runtime-es2015.528eac4c059023231e5e.js" type="module"></script><script src="runtime-es5.528eac4c059023231e5e.js" nomodule defer></script><script src="polyfills-es5.4f39b8044fe60aac5d2e.js" nomodule defer></script><script src="polyfills-es2015.e04c183f50820e591f59.js" type="module"></script><script src="main-es2015.2c9eb6010540f33ca371.js" type="module"></script><script src="main-es5.2c9eb6010540f33ca371.js" nomodule defer></script></body>
 </html>
