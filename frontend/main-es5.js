@@ -1217,7 +1217,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   function packageJson(module) {
-    module.exports = JSON.parse("{\"name\":\"frontend\",\"version\":\"1.0.9704\",\"scripts\":{\"ng\":\"ng\",\"start\":\"ng serve --aot --host 0.0.0.0 --disable-host-check\",\"startssl\":\"ng serve --aot --port 4235 --host inventory.local --disable-host-check --ssl true --sslCert=./ssl/localhost.crt --sslKey=./ssl/localhost.key --open\",\"startssl_test\":\"ng serve --host inventory.local --publicHost inventory.local:4200/sockjs-node --disable-host-check --ssl true --sslCert=./ssl/localhost.crt --sslKey=./ssl/localhost.key\",\"prebuild-xxx\":\"yarn version --patch\",\"build\":\"ng build\",\"build-prod\":\"ng build --output-path=dist/prod --configuration=production\",\"build-rc\":\"ng build --output-path=dist/rc --configuration=rc\",\"build-dev\":\"ng build --output-path=dist/dev --configuration=dev\",\"firebase-deploy-prod\":\"firebase deploy --only hosting:frontend\",\"firebase-deploy-rc\":\"firebase deploy --only hosting:rc\",\"firebase-deploy-dev\":\"firebase deploy --only hosting:dev\",\"firebase-deploy-all\":\"firebase deploy\",\"startpwaOld\":\"http-server -p 4225 -c-1 dist/frontend -S -C ssh_pem/cert.pem -K ssh_pem/key.pem -o\",\"startpwa\":\"http-server -p 4225 -c-1 dist/frontend -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-rc\":\"http-server -p 4245 -c-1 dist/rc -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-dev\":\"http-server -p 4255 -c-1 dist/dev -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-prod\":\"http-server -p 4265 -c-1 dist/prod -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"buildpwa\":\"yarn run prebuild && ng build --prod --project frontend\",\"rebuild\":\"ng build --prod --project frontend\",\"test\":\"ng test\",\"lint\":\"ng lint\",\"e2e\":\"ng e2e\",\"serve-dist\":\"ts-node node-dist-server.ts\",\"serve-dist-js\":\"node node-dist-server.js\"},\"private\":true,\"dependencies\":{\"@angular/animations\":\"~8.2.14\",\"@angular/common\":\"~8.2.14\",\"@angular/compiler\":\"~8.2.14\",\"@angular/core\":\"~8.2.14\",\"@angular/fire\":\"5.4.2\",\"@angular/forms\":\"~8.2.14\",\"@angular/platform-browser\":\"~8.2.14\",\"@angular/platform-browser-dynamic\":\"~8.2.14\",\"@angular/pwa\":\"^0.1000.5\",\"@angular/router\":\"~8.2.14\",\"@angular/service-worker\":\"~8.2.14\",\"@auth0/angular-jwt\":\"^5.0.2\",\"@fortawesome/angular-fontawesome\":\"0.4.0\",\"@fortawesome/fontawesome-svg-core\":\"^1.2.8\",\"@fortawesome/free-brands-svg-icons\":\"^5.5.0\",\"@fortawesome/free-regular-svg-icons\":\"^5.5.0\",\"@fortawesome/free-solid-svg-icons\":\"^5.5.0\",\"@ng-bootstrap/ng-bootstrap\":\"^5.1.5\",\"@types/crypto-js\":\"3.1.47\",\"@zxing/ngx-scanner\":\"^3.0.0\",\"angular-cropperjs\":\"^1.0.2\",\"bootstrap\":\"^4.4.1\",\"browser-image-compression\":\"^1.0.11\",\"compress\":\"^0.99.0\",\"compressorjs\":\"^1.0.6\",\"cropperjs\":\"^1.5.6\",\"crypto-js\":\"3.3.0\",\"dexie\":\"2.0.4\",\"dexie-observable\":\"1.0.0-beta.7\",\"dexie-relationships\":\"^1.2.11\",\"dexie-syncable\":\"1.0.0-beta.6\",\"es6-shim\":\"^0.35.5\",\"express\":\"^4.17.1\",\"express-cors\":\"0.0.3\",\"faker\":\"^4.1.0\",\"firebase\":\">= 5.5.7 <8\",\"global\":\"^4.4.0\",\"guid-typescript\":\"^1.0.9\",\"json-server\":\"^0.15.1\",\"ngx-toastr\":\"10.0.4\",\"ngx-webcam\":\"0.2.6\",\"rxjs\":\"~6.4.0\",\"ts-md5\":\"^1.2.7\",\"tslib\":\"^1.10.0\",\"web-push\":\"^3.4.4\",\"zone.js\":\"~0.9.1\"},\"devDependencies\":{\"@angular-devkit/architect\":\"<0.900 || ^0.900.0-0 || ^9.0.0-0\",\"@angular-devkit/build-angular\":\"^0.803.23\",\"@angular/cli\":\"8.3.0\",\"@angular/compiler-cli\":\"~8.2.14\",\"@angular/language-service\":\"~8.2.14\",\"@types/browser-image-compression\":\"^1.0.1\",\"@types/jasmine\":\"~3.3.8\",\"@types/jasminewd2\":\"~2.0.3\",\"@types/node\":\"^14.14.22\",\"codelyzer\":\"^5.0.0\",\"express-serve-static-core\":\"^0.1.1\",\"firebase-tools\":\"^7.12.0\",\"fuzzy\":\"^0.1.3\",\"inquirer\":\"^6.2.2\",\"inquirer-autocomplete-prompt\":\"^1.0.1\",\"jasmine-core\":\"~3.4.0\",\"jasmine-spec-reporter\":\"~4.2.1\",\"karma\":\"~4.1.0\",\"karma-chrome-launcher\":\"~2.2.0\",\"karma-coverage-istanbul-reporter\":\"~2.0.1\",\"karma-jasmine\":\"~2.0.1\",\"karma-jasmine-html-reporter\":\"^1.4.0\",\"moment\":\"^2.24.0\",\"protractor\":\"~5.4.0\",\"reflect-metadata\":\"^0.1.13\",\"spa-http-server\":\"^0.9.0\",\"ts-node\":\"^8.8.2\",\"tslint\":\"~5.15.0\",\"typescript\":\"~3.5.3\"}}");
+    module.exports = JSON.parse("{\"name\":\"frontend\",\"version\":\"1.0.9706\",\"scripts\":{\"ng\":\"ng\",\"start\":\"ng serve --aot --host 0.0.0.0 --disable-host-check\",\"startssl\":\"ng serve --aot --port 4235 --host inventory.local --disable-host-check --ssl true --sslCert=./ssl/localhost.crt --sslKey=./ssl/localhost.key --open\",\"startssl_test\":\"ng serve --host inventory.local --publicHost inventory.local:4200/sockjs-node --disable-host-check --ssl true --sslCert=./ssl/localhost.crt --sslKey=./ssl/localhost.key\",\"prebuild-xxx\":\"yarn version --patch\",\"build\":\"ng build\",\"build-prod\":\"ng build --output-path=dist/prod --configuration=production\",\"build-rc\":\"ng build --output-path=dist/rc --configuration=rc\",\"build-dev\":\"ng build --output-path=dist/dev --configuration=dev\",\"firebase-deploy-prod\":\"firebase deploy --only hosting:frontend\",\"firebase-deploy-rc\":\"firebase deploy --only hosting:rc\",\"firebase-deploy-dev\":\"firebase deploy --only hosting:dev\",\"firebase-deploy-all\":\"firebase deploy\",\"startpwaOld\":\"http-server -p 4225 -c-1 dist/frontend -S -C ssh_pem/cert.pem -K ssh_pem/key.pem -o\",\"startpwa\":\"http-server -p 4225 -c-1 dist/frontend -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-rc\":\"http-server -p 4245 -c-1 dist/rc -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-dev\":\"http-server -p 4255 -c-1 dist/dev -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-prod\":\"http-server -p 4265 -c-1 dist/prod -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"buildpwa\":\"yarn run prebuild && ng build --prod --project frontend\",\"rebuild\":\"ng build --prod --project frontend\",\"test\":\"ng test\",\"lint\":\"ng lint\",\"e2e\":\"ng e2e\",\"serve-dist\":\"ts-node node-dist-server.ts\",\"serve-dist-js\":\"node node-dist-server.js\"},\"private\":true,\"dependencies\":{\"@angular/animations\":\"~8.2.14\",\"@angular/common\":\"~8.2.14\",\"@angular/compiler\":\"~8.2.14\",\"@angular/core\":\"~8.2.14\",\"@angular/fire\":\"5.4.2\",\"@angular/forms\":\"~8.2.14\",\"@angular/platform-browser\":\"~8.2.14\",\"@angular/platform-browser-dynamic\":\"~8.2.14\",\"@angular/pwa\":\"^0.1000.5\",\"@angular/router\":\"~8.2.14\",\"@angular/service-worker\":\"~8.2.14\",\"@auth0/angular-jwt\":\"^5.0.2\",\"@fortawesome/angular-fontawesome\":\"0.4.0\",\"@fortawesome/fontawesome-svg-core\":\"^1.2.8\",\"@fortawesome/free-brands-svg-icons\":\"^5.5.0\",\"@fortawesome/free-regular-svg-icons\":\"^5.5.0\",\"@fortawesome/free-solid-svg-icons\":\"^5.5.0\",\"@ng-bootstrap/ng-bootstrap\":\"^5.1.5\",\"@types/crypto-js\":\"3.1.47\",\"@zxing/ngx-scanner\":\"^3.0.0\",\"angular-cropperjs\":\"^1.0.2\",\"bootstrap\":\"^4.4.1\",\"browser-image-compression\":\"^1.0.11\",\"compress\":\"^0.99.0\",\"compressorjs\":\"^1.0.6\",\"cropperjs\":\"^1.5.6\",\"crypto-js\":\"3.3.0\",\"dexie\":\"2.0.4\",\"dexie-observable\":\"1.0.0-beta.7\",\"dexie-relationships\":\"^1.2.11\",\"dexie-syncable\":\"1.0.0-beta.6\",\"es6-shim\":\"^0.35.5\",\"express\":\"^4.17.1\",\"express-cors\":\"0.0.3\",\"faker\":\"^4.1.0\",\"firebase\":\">= 5.5.7 <8\",\"global\":\"^4.4.0\",\"guid-typescript\":\"^1.0.9\",\"json-server\":\"^0.15.1\",\"ngx-toastr\":\"10.0.4\",\"ngx-webcam\":\"0.2.6\",\"rxjs\":\"~6.4.0\",\"ts-md5\":\"^1.2.7\",\"tslib\":\"^1.10.0\",\"web-push\":\"^3.4.4\",\"zone.js\":\"~0.9.1\"},\"devDependencies\":{\"@angular-devkit/architect\":\"<0.900 || ^0.900.0-0 || ^9.0.0-0\",\"@angular-devkit/build-angular\":\"^0.803.23\",\"@angular/cli\":\"8.3.0\",\"@angular/compiler-cli\":\"~8.2.14\",\"@angular/language-service\":\"~8.2.14\",\"@types/browser-image-compression\":\"^1.0.1\",\"@types/jasmine\":\"~3.3.8\",\"@types/jasminewd2\":\"~2.0.3\",\"@types/node\":\"^14.14.22\",\"codelyzer\":\"^5.0.0\",\"express-serve-static-core\":\"^0.1.1\",\"firebase-tools\":\"^7.12.0\",\"fuzzy\":\"^0.1.3\",\"inquirer\":\"^6.2.2\",\"inquirer-autocomplete-prompt\":\"^1.0.1\",\"jasmine-core\":\"~3.4.0\",\"jasmine-spec-reporter\":\"~4.2.1\",\"karma\":\"~4.1.0\",\"karma-chrome-launcher\":\"~2.2.0\",\"karma-coverage-istanbul-reporter\":\"~2.0.1\",\"karma-jasmine\":\"~2.0.1\",\"karma-jasmine-html-reporter\":\"^1.4.0\",\"moment\":\"^2.24.0\",\"protractor\":\"~5.4.0\",\"reflect-metadata\":\"^0.1.13\",\"spa-http-server\":\"^0.9.0\",\"ts-node\":\"^8.8.2\",\"tslint\":\"~5.15.0\",\"typescript\":\"~3.5.3\"}}");
     /***/
   },
 
@@ -21677,11 +21677,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "get",
         value: function get(path, options) {
+          console.log('ApiService #89 Send GET-Request for path ', path, this.getUrl(path));
           return this.http.get(this.getUrl(path), options);
         }
       }, {
         key: "post",
         value: function post(path, body, options) {
+          console.log('ApiService #89 Send POST-Request for path ', path, this.getUrl(path));
           return this.http.post(this.getUrl(path), body, options);
         }
       }, {
@@ -25278,24 +25280,26 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee231() {
             var _this141 = this;
 
-            var devid, lastRevId;
+            var logTi, devid, lastRevId;
             return regeneratorRuntime.wrap(function _callee231$(_context233) {
               while (1) {
                 switch (_context233.prev = _context233.next) {
                   case 0:
+                    logTi = 'DbsyncClientService.askServerForChanges(' + jobid + ')';
+
                     if (!jobid) {
                       jobid = this.baseData.getCurrentJobid();
                     }
 
                     devid = this.baseData.getCurrentDeviceId() || 0;
-                    _context233.next = 4;
+                    _context233.next = 5;
                     return this.getClientRevIdByJobid(jobid);
 
-                  case 4:
+                  case 5:
                     lastRevId = _context233.sent;
 
                     if (this.networkService.hasServerAccess) {
-                      _context233.next = 8;
+                      _context233.next = 9;
                       break;
                     }
 
@@ -25307,7 +25311,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                       NumChanges: -1
                     });
 
-                  case 8:
+                  case 9:
+                    console.log(logTi + ' #466 Send Request: ' + "api/sync/havingChanges/".concat(jobid, "/").concat(lastRevId, "/").concat(devid));
                     return _context233.abrupt("return", this.apiService.get("api/sync/havingChanges/".concat(jobid, "/").concat(lastRevId, "/").concat(devid), {}).toPromise().then(function (data) {
                       return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this141, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee230() {
                         return regeneratorRuntime.wrap(function _callee230$(_context232) {
@@ -25336,9 +25341,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                           }
                         }, _callee230);
                       }));
+                    })["catch"](function (reason) {
+                      console.error(logTi + ' #480 HTTP-ERROR ', {
+                        reason: reason
+                      });
+                      return {
+                        success: false
+                      };
                     }));
 
-                  case 9:
+                  case 11:
                   case "end":
                     return _context233.stop();
                 }
