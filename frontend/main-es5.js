@@ -1217,7 +1217,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   function packageJson(module) {
-    module.exports = JSON.parse("{\"name\":\"frontend\",\"version\":\"1.0.93\",\"scripts\":{\"ng\":\"ng\",\"start\":\"ng serve --aot --host 0.0.0.0 --disable-host-check\",\"startssl\":\"ng serve --aot --port 4235 --host inventory.local --disable-host-check --ssl true --sslCert=./ssl/localhost.crt --sslKey=./ssl/localhost.key --open\",\"startssl_test\":\"ng serve --host inventory.local --publicHost inventory.local:4200/sockjs-node --disable-host-check --ssl true --sslCert=./ssl/localhost.crt --sslKey=./ssl/localhost.key\",\"prebuild\":\"yarn version --patch\",\"build\":\"ng build\",\"build-prod\":\"ng build --output-path=dist/prod --configuration=production\",\"build-rc\":\"ng build --output-path=dist/rc --configuration=rc\",\"build-dev\":\"ng build --output-path=dist/dev --configuration=dev\",\"firebase-deploy-prod\":\"firebase deploy --only hosting:frontend\",\"firebase-deploy-rc\":\"firebase deploy --only hosting:rc\",\"firebase-deploy-dev\":\"firebase deploy --only hosting:dev\",\"firebase-deploy-all\":\"firebase deploy\",\"startpwaOld\":\"http-server -p 4225 -c-1 dist/frontend -S -C ssh_pem/cert.pem -K ssh_pem/key.pem -o\",\"startpwa\":\"http-server -p 4225 -c-1 dist/frontend -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-rc\":\"http-server -p 4245 -c-1 dist/rc -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-dev\":\"http-server -p 4255 -c-1 dist/dev -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-prod\":\"http-server -p 4265 -c-1 dist/prod -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"buildpwa\":\"yarn run prebuild && ng build --prod --project frontend\",\"rebuild\":\"ng build --prod --project frontend\",\"test\":\"ng test\",\"lint\":\"ng lint\",\"e2e\":\"ng e2e\",\"serve-dist\":\"ts-node node-dist-server.ts\",\"serve-dist-js\":\"node node-dist-server.js\"},\"private\":true,\"dependencies\":{\"@angular/animations\":\"~8.2.14\",\"@angular/common\":\"~8.2.14\",\"@angular/compiler\":\"~8.2.14\",\"@angular/core\":\"~8.2.14\",\"@angular/fire\":\"5.4.2\",\"@angular/forms\":\"~8.2.14\",\"@angular/platform-browser\":\"~8.2.14\",\"@angular/platform-browser-dynamic\":\"~8.2.14\",\"@angular/pwa\":\"^0.1000.5\",\"@angular/router\":\"~8.2.14\",\"@angular/service-worker\":\"~8.2.14\",\"@auth0/angular-jwt\":\"^5.0.2\",\"@fortawesome/angular-fontawesome\":\"0.4.0\",\"@fortawesome/fontawesome-svg-core\":\"^1.2.8\",\"@fortawesome/free-brands-svg-icons\":\"^5.5.0\",\"@fortawesome/free-regular-svg-icons\":\"^5.5.0\",\"@fortawesome/free-solid-svg-icons\":\"^5.5.0\",\"@ng-bootstrap/ng-bootstrap\":\"^5.1.5\",\"@types/crypto-js\":\"3.1.47\",\"@zxing/ngx-scanner\":\"^3.0.0\",\"angular-cropperjs\":\"^1.0.2\",\"bootstrap\":\"^4.4.1\",\"browser-image-compression\":\"^1.0.11\",\"compress\":\"^0.99.0\",\"compressorjs\":\"^1.0.6\",\"cropperjs\":\"^1.5.6\",\"crypto-js\":\"3.3.0\",\"dexie\":\"2.0.4\",\"dexie-observable\":\"1.0.0-beta.7\",\"dexie-relationships\":\"^1.2.11\",\"dexie-syncable\":\"1.0.0-beta.6\",\"es6-shim\":\"^0.35.5\",\"express\":\"^4.17.1\",\"express-cors\":\"0.0.3\",\"faker\":\"^4.1.0\",\"firebase\":\">= 5.5.7 <8\",\"global\":\"^4.4.0\",\"guid-typescript\":\"^1.0.9\",\"json-server\":\"^0.15.1\",\"ngx-toastr\":\"10.0.4\",\"ngx-webcam\":\"0.2.6\",\"rxjs\":\"~6.4.0\",\"ts-md5\":\"^1.2.7\",\"tslib\":\"^1.10.0\",\"web-push\":\"^3.4.4\",\"zone.js\":\"~0.9.1\"},\"devDependencies\":{\"@angular-devkit/architect\":\"<0.900 || ^0.900.0-0 || ^9.0.0-0\",\"@angular-devkit/build-angular\":\"^0.803.23\",\"@angular/cli\":\"8.3.0\",\"@angular/compiler-cli\":\"~8.2.14\",\"@angular/language-service\":\"~8.2.14\",\"@types/browser-image-compression\":\"^1.0.1\",\"@types/jasmine\":\"~3.3.8\",\"@types/jasminewd2\":\"~2.0.3\",\"@types/node\":\"^14.14.22\",\"codelyzer\":\"^5.0.0\",\"express-serve-static-core\":\"^0.1.1\",\"firebase-tools\":\"^7.12.0\",\"fuzzy\":\"^0.1.3\",\"inquirer\":\"^6.2.2\",\"inquirer-autocomplete-prompt\":\"^1.0.1\",\"jasmine-core\":\"~3.4.0\",\"jasmine-spec-reporter\":\"~4.2.1\",\"karma\":\"~4.1.0\",\"karma-chrome-launcher\":\"~2.2.0\",\"karma-coverage-istanbul-reporter\":\"~2.0.1\",\"karma-jasmine\":\"~2.0.1\",\"karma-jasmine-html-reporter\":\"^1.4.0\",\"moment\":\"^2.24.0\",\"protractor\":\"~5.4.0\",\"reflect-metadata\":\"^0.1.13\",\"spa-http-server\":\"^0.9.0\",\"ts-node\":\"^8.8.2\",\"tslint\":\"~5.15.0\",\"typescript\":\"~3.5.3\"}}");
+    module.exports = JSON.parse("{\"name\":\"frontend\",\"version\":\"1.0.95\",\"scripts\":{\"ng\":\"ng\",\"start\":\"ng serve --aot --host 0.0.0.0 --disable-host-check\",\"startssl\":\"ng serve --aot --port 4235 --host inventory.local --disable-host-check --ssl true --sslCert=./ssl/localhost.crt --sslKey=./ssl/localhost.key --open\",\"startssl_test\":\"ng serve --host inventory.local --publicHost inventory.local:4200/sockjs-node --disable-host-check --ssl true --sslCert=./ssl/localhost.crt --sslKey=./ssl/localhost.key\",\"prebuild\":\"yarn version --patch\",\"build\":\"ng build\",\"build-prod\":\"ng build --output-path=dist/prod --configuration=production\",\"build-rc\":\"ng build --output-path=dist/rc --configuration=rc\",\"build-dev\":\"ng build --output-path=dist/dev --configuration=dev\",\"firebase-deploy-prod\":\"firebase deploy --only hosting:frontend\",\"firebase-deploy-rc\":\"firebase deploy --only hosting:rc\",\"firebase-deploy-dev\":\"firebase deploy --only hosting:dev\",\"firebase-deploy-all\":\"firebase deploy\",\"startpwaOld\":\"http-server -p 4225 -c-1 dist/frontend -S -C ssh_pem/cert.pem -K ssh_pem/key.pem -o\",\"startpwa\":\"http-server -p 4225 -c-1 dist/frontend -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-rc\":\"http-server -p 4245 -c-1 dist/rc -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-dev\":\"http-server -p 4255 -c-1 dist/dev -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-prod\":\"http-server -p 4265 -c-1 dist/prod -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"buildpwa\":\"yarn run prebuild && ng build --prod --project frontend\",\"rebuild\":\"ng build --prod --project frontend\",\"test\":\"ng test\",\"lint\":\"ng lint\",\"e2e\":\"ng e2e\",\"serve-dist\":\"ts-node node-dist-server.ts\",\"serve-dist-js\":\"node node-dist-server.js\"},\"private\":true,\"dependencies\":{\"@angular/animations\":\"~8.2.14\",\"@angular/common\":\"~8.2.14\",\"@angular/compiler\":\"~8.2.14\",\"@angular/core\":\"~8.2.14\",\"@angular/fire\":\"5.4.2\",\"@angular/forms\":\"~8.2.14\",\"@angular/platform-browser\":\"~8.2.14\",\"@angular/platform-browser-dynamic\":\"~8.2.14\",\"@angular/pwa\":\"^0.1000.5\",\"@angular/router\":\"~8.2.14\",\"@angular/service-worker\":\"~8.2.14\",\"@auth0/angular-jwt\":\"^5.0.2\",\"@fortawesome/angular-fontawesome\":\"0.4.0\",\"@fortawesome/fontawesome-svg-core\":\"^1.2.8\",\"@fortawesome/free-brands-svg-icons\":\"^5.5.0\",\"@fortawesome/free-regular-svg-icons\":\"^5.5.0\",\"@fortawesome/free-solid-svg-icons\":\"^5.5.0\",\"@ng-bootstrap/ng-bootstrap\":\"^5.1.5\",\"@types/crypto-js\":\"3.1.47\",\"@zxing/ngx-scanner\":\"^3.0.0\",\"angular-cropperjs\":\"^1.0.2\",\"bootstrap\":\"^4.4.1\",\"browser-image-compression\":\"^1.0.11\",\"compress\":\"^0.99.0\",\"compressorjs\":\"^1.0.6\",\"cropperjs\":\"^1.5.6\",\"crypto-js\":\"3.3.0\",\"dexie\":\"2.0.4\",\"dexie-observable\":\"1.0.0-beta.7\",\"dexie-relationships\":\"^1.2.11\",\"dexie-syncable\":\"1.0.0-beta.6\",\"es6-shim\":\"^0.35.5\",\"express\":\"^4.17.1\",\"express-cors\":\"0.0.3\",\"faker\":\"^4.1.0\",\"firebase\":\">= 5.5.7 <8\",\"global\":\"^4.4.0\",\"guid-typescript\":\"^1.0.9\",\"json-server\":\"^0.15.1\",\"ngx-toastr\":\"10.0.4\",\"ngx-webcam\":\"0.2.6\",\"rxjs\":\"~6.4.0\",\"ts-md5\":\"^1.2.7\",\"tslib\":\"^1.10.0\",\"web-push\":\"^3.4.4\",\"zone.js\":\"~0.9.1\"},\"devDependencies\":{\"@angular-devkit/architect\":\"<0.900 || ^0.900.0-0 || ^9.0.0-0\",\"@angular-devkit/build-angular\":\"^0.803.23\",\"@angular/cli\":\"8.3.0\",\"@angular/compiler-cli\":\"~8.2.14\",\"@angular/language-service\":\"~8.2.14\",\"@types/browser-image-compression\":\"^1.0.1\",\"@types/jasmine\":\"~3.3.8\",\"@types/jasminewd2\":\"~2.0.3\",\"@types/node\":\"^14.14.22\",\"codelyzer\":\"^5.0.0\",\"express-serve-static-core\":\"^0.1.1\",\"firebase-tools\":\"^7.12.0\",\"fuzzy\":\"^0.1.3\",\"inquirer\":\"^6.2.2\",\"inquirer-autocomplete-prompt\":\"^1.0.1\",\"jasmine-core\":\"~3.4.0\",\"jasmine-spec-reporter\":\"~4.2.1\",\"karma\":\"~4.1.0\",\"karma-chrome-launcher\":\"~2.2.0\",\"karma-coverage-istanbul-reporter\":\"~2.0.1\",\"karma-jasmine\":\"~2.0.1\",\"karma-jasmine-html-reporter\":\"^1.4.0\",\"moment\":\"^2.24.0\",\"protractor\":\"~5.4.0\",\"reflect-metadata\":\"^0.1.13\",\"spa-http-server\":\"^0.9.0\",\"ts-node\":\"^8.8.2\",\"tslint\":\"~5.15.0\",\"typescript\":\"~3.5.3\"}}");
     /***/
   },
 
@@ -9756,8 +9756,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           var _this45 = this;
 
           var modalRef = this.modalService.open(_modals_create_artikel_image_create_artikel_image_component__WEBPACK_IMPORTED_MODULE_11__["CreateArtikelImageComponent"], {
-            size: 'xl',
-            scrollable: true
+            size: 'xl'
           });
           this.modalWatch(modalRef, 'CreateArtikelImage');
           modalRef.componentInstance.name = this.formInventar.Bezeichnung + '/' + this.formInventar.Typ;
@@ -9778,8 +9777,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           var _this46 = this;
 
           var modalRef = this.modalService.open(_modals_show_artikel_image_show_artikel_image_component__WEBPACK_IMPORTED_MODULE_12__["ShowArtikelImageComponent"], {
-            size: 'xl',
-            scrollable: true
+            size: 'xl'
           });
           this.modalWatch(modalRef, 'ShowArtikelImage');
           modalRef.componentInstance.name = 'World';
@@ -9828,8 +9826,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             inputElm: inputElm
           });
           var modalRef = this.modalService.open(_modals_batch_barcodes_batch_barcodes_component__WEBPACK_IMPORTED_MODULE_34__["BatchBarcodesComponent"], {
-            size: 'xl',
-            scrollable: true
+            size: 'xl'
           });
           this.modalWatch(modalRef, 'BatchBarcodes');
 
@@ -9995,9 +9992,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           var settings = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
           var modalRef = this.modalService.open(_modals_select_create_artikel_select_create_artikel_component__WEBPACK_IMPORTED_MODULE_8__["SelectCreateArtikelComponent"], {
-            size: 'xl',
-            scrollable: true
-          });
+            size: 'xl'
+          }); // , scrollable: true } );
+
           this.modalWatch(modalRef, 'SelectCreateArtikel');
           modalRef.componentInstance.name = 'World';
           modalRef.componentInstance.clientId = this.clientID;
@@ -10020,8 +10017,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           var _this51 = this;
 
           var modalRef = this.modalService.open(_modals_select_search_artikel_select_search_artikel_component__WEBPACK_IMPORTED_MODULE_13__["SelectSearchArtikelComponent"], {
-            size: 'xl',
-            scrollable: true
+            size: 'xl'
           });
           this.modalWatch(modalRef, 'SelectSearchArtikel');
           modalRef.componentInstance.clientId = this.clientID;
@@ -10042,8 +10038,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           var _this52 = this;
 
           var modalRef = this.modalService.open(_modals_select_search_raum_select_search_raum_component__WEBPACK_IMPORTED_MODULE_17__["SelectSearchRaumComponent"], {
-            size: 'xl',
-            scrollable: true
+            size: 'xl'
           });
           this.modalWatch(modalRef, 'SelectSearchRaum');
           modalRef.componentInstance.gebaeudeId = this.buildingID;
@@ -10062,8 +10057,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           var _this53 = this;
 
           var modalRef = this.modalService.open(_modals_edit_raum_edit_raum_component__WEBPACK_IMPORTED_MODULE_28__["EditRaumComponent"], {
-            size: 'xl',
-            scrollable: true
+            size: 'xl'
           });
           this.modalWatch(modalRef, 'EditRaum');
           modalRef.componentInstance.raumUuid = this.roomUuiD;
@@ -10080,8 +10074,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           var _this54 = this;
 
           var modalRef = this.modalService.open(_modals_edit_inventar_edit_inventar_component__WEBPACK_IMPORTED_MODULE_30__["EditInventarComponent"], {
-            size: 'xl',
-            scrollable: true
+            size: 'xl'
           });
           this.modalWatch(modalRef, 'EditInventar');
           console.log('InventFormComponente #715 this.inventarData ' + this.inventarData.inventar.uuid);
@@ -10105,8 +10098,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           var _this55 = this;
 
           var modalRef = this.modalService.open(_modals_select_create_raum_select_create_raum_component__WEBPACK_IMPORTED_MODULE_14__["SelectCreateRaumComponent"], {
-            size: 'xl',
-            scrollable: true
+            size: 'xl'
           });
           this.modalWatch(modalRef, 'SelectCreateRaum');
           this.openedCreateRaum = true;
@@ -25008,8 +25000,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "autoSyncStart",
         value: function autoSyncStart() {
-          var _this141 = this;
-
           var startNow = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
           var logTi = 'DbsyncClientService.autoSyncStart(' + (startNow ? 'true' : 'false') + ')';
 
@@ -25018,25 +25008,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           } // Sync im 1-Minuten-Takt
 
 
-          if (this.dbgLog) {
-            console.log(logTi + new Date().toTimeString() + ' setInterval this.sync, ' + this.syncIntervalTime + 'ms');
-          }
-
+          console.log(logTi + new Date().toTimeString() + ' setInterval this.sync, ' + this.syncIntervalTime + 'ms');
           var syncFunction = this.sync.bind(this);
           this.syncIntervalTimer = setInterval(function () {
-            if (_this141.dbgLog) {
-              console.log(logTi + new Date().toTimeString() + ' interval execute this.sync.bind');
-            }
-
+            console.log(logTi + new Date().toTimeString() + ' interval execute this.sync.bind');
             syncFunction();
           }, this.syncIntervalTime);
           this.autoSyncChange.emit(true);
 
           if (startNow) {
-            if (this.dbgLog) {
-              console.log(logTi + new Date().toTimeString() + ' startNow before interval starts in ' + this.syncIntervalTime + 'ms');
-            }
-
+            console.log(logTi + new Date().toTimeString() + ' startNow before interval starts in ' + this.syncIntervalTime + 'ms');
             this.sync();
           }
         }
@@ -25055,137 +25036,143 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "sync",
         value: function sync() {
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee226() {
-            var logTi, isDBSyncService, currJobId, incompleteInventurLogs, currJobIdx, currJob, _iterator11, _step11, logs;
+            var logTi, currJobId, isDBSyncService, incompleteInventurLogs, currJobIdx, currJob, _iterator11, _step11, logs;
 
             return regeneratorRuntime.wrap(function _callee226$(_context228) {
               while (1) {
                 switch (_context228.prev = _context228.next) {
                   case 0:
                     logTi = 'DbsyncClientService.sync()';
+                    currJobId = this.baseData.getCurrentJobid();
+                    console.log('DBSyncClientService.sync() #377 STARTED currJobId(', currJobId, ') at ' + new Date().toLocaleString());
 
                     if (this.networkService.getCurrentState().hasServerAccess) {
-                      _context228.next = 3;
+                      _context228.next = 6;
                       break;
                     }
 
+                    console.error(logTi + ' #379 ABORT No-Internet-Access');
                     return _context228.abrupt("return");
 
-                  case 3:
+                  case 6:
                     isDBSyncService = this instanceof DBSyncClientService_1;
 
                     if (this.isInDebugMode) {
-                      console.log(logTi + ' #376 this is DBSyncClientService', {
+                      console.log(logTi + ' #384 this is DBSyncClientService', {
                         isDBSyncService: isDBSyncService
                       });
                     }
 
                     if (isDBSyncService) {
-                      _context228.next = 8;
+                      _context228.next = 11;
                       break;
                     }
 
-                    console.error(logTi + ' #379 this is not correct binded to Instance of DBSyncClientService');
+                    console.error(logTi + ' #387 this is not correct binded to Instance of DBSyncClientService');
                     return _context228.abrupt("return");
 
-                  case 8:
-                    currJobId = this.baseData.getCurrentJobid();
-                    console.log('DBSyncClientService.sync() #366 currJobId:', currJobId);
-
+                  case 11:
                     if (this.isInDebugMode) {
-                      console.log('DBSyncClientService.sync() #368 call getIncompleteInventuren()');
+                      console.log(logTi + ' #392 call getIncompleteInventuren()');
                     }
 
-                    _context228.next = 13;
+                    _context228.next = 14;
                     return this.getIncompleteInventuren();
 
-                  case 13:
+                  case 14:
                     incompleteInventurLogs = _context228.sent;
+                    console.log(logTi + ' #389 no changes of currJobId(' + currJobId + ')', {
+                      incompleteInventurLogs: incompleteInventurLogs
+                    });
                     currJobIdx = incompleteInventurLogs.map(function (itm) {
                       return itm.jobid;
                     }).indexOf(currJobId);
 
                     if (this.isInDebugMode) {
-                      console.log('DBSyncClientService.sync() #374 currJobIdx: ', currJobIdx);
+                      console.log(logTi + ' #398 currJobIdx: ', currJobIdx);
                     }
 
                     if (!(currJobIdx !== -1)) {
-                      _context228.next = 23;
+                      _context228.next = 27;
                       break;
                     }
 
                     if (this.isInDebugMode) {
-                      console.log('DBSyncClientService.sync() #379');
+                      console.log(logTi + ' #403');
                     }
 
                     currJob = incompleteInventurLogs[currJobIdx];
                     incompleteInventurLogs = incompleteInventurLogs.slice(currJobIdx, 1);
-
-                    if (this.isInDebugMode) {
-                      console.log('DBSyncClientService.sync() #384 call sendByJobId(', currJob.jobid, currJob.changes, ')');
-                    }
-
-                    _context228.next = 23;
+                    console.log(logTi + ' #407 call sendByJobId(', currJob.jobid, currJob.changes, ')');
+                    _context228.next = 25;
                     return this.sendByJobId(currJob.jobid, currJob.changes);
 
-                  case 23:
+                  case 25:
+                    _context228.next = 28;
+                    break;
+
+                  case 27:
+                    console.log(logTi + ' #410 no changes of currJobId(' + currJobId + ')');
+
+                  case 28:
                     _iterator11 = _createForOfIteratorHelper(incompleteInventurLogs);
-                    _context228.prev = 24;
+                    _context228.prev = 29;
 
                     _iterator11.s();
 
-                  case 26:
+                  case 31:
                     if ((_step11 = _iterator11.n()).done) {
-                      _context228.next = 35;
+                      _context228.next = 40;
                       break;
                     }
 
                     logs = _step11.value;
 
                     if (!(logs.jobid === currJobId)) {
-                      _context228.next = 30;
+                      _context228.next = 35;
                       break;
                     }
 
-                    return _context228.abrupt("continue", 33);
-
-                  case 30:
-                    if (this.isInDebugMode) {
-                      console.log('DBSyncClientService.sync() #391 call sendByJobId(', logs.jobid, logs.changes, ')');
-                    }
-
-                    _context228.next = 33;
-                    return this.sendByJobId(logs.jobid, logs.changes);
-
-                  case 33:
-                    _context228.next = 26;
-                    break;
+                    return _context228.abrupt("continue", 38);
 
                   case 35:
-                    _context228.next = 40;
+                    if (this.isInDebugMode) {
+                      console.log(logTi + ' #418 call sendByJobId(', logs.jobid, logs.changes, ')');
+                    }
+
+                    _context228.next = 38;
+                    return this.sendByJobId(logs.jobid, logs.changes);
+
+                  case 38:
+                    _context228.next = 31;
                     break;
 
-                  case 37:
-                    _context228.prev = 37;
-                    _context228.t0 = _context228["catch"](24);
+                  case 40:
+                    _context228.next = 45;
+                    break;
+
+                  case 42:
+                    _context228.prev = 42;
+                    _context228.t0 = _context228["catch"](29);
 
                     _iterator11.e(_context228.t0);
 
-                  case 40:
-                    _context228.prev = 40;
+                  case 45:
+                    _context228.prev = 45;
 
                     _iterator11.f();
 
-                    return _context228.finish(40);
+                    return _context228.finish(45);
 
-                  case 43:
-                    console.log('DBSyncClientService.sync() # 395 END');
+                  case 48:
+                    console.log(logTi + ' #423 END');
 
-                  case 44:
+                  case 49:
                   case "end":
                     return _context228.stop();
                 }
               }
-            }, _callee226, this, [[24, 37, 40, 43]]);
+            }, _callee226, this, [[29, 42, 45, 48]]);
           }));
         }
       }, {
@@ -25273,7 +25260,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function askServerForChanges() {
           var jobid = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee231() {
-            var _this142 = this;
+            var _this141 = this;
 
             var devid, lastRevId;
             return regeneratorRuntime.wrap(function _callee231$(_context233) {
@@ -25306,7 +25293,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
                   case 8:
                     return _context233.abrupt("return", this.apiService.get("api/sync/havingChanges/".concat(jobid, "/").concat(lastRevId, "/").concat(devid), {}).toPromise().then(function (data) {
-                      return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this142, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee230() {
+                      return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this141, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee230() {
                         return regeneratorRuntime.wrap(function _callee230$(_context232) {
                           while (1) {
                             switch (_context232.prev = _context232.next) {
@@ -25487,7 +25474,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "sendByJobId",
         value: function sendByJobId(useJobid, useLogs, useJobResult) {
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee238() {
-            var _this143 = this;
+            var _this142 = this;
 
             var logTi, jobid, syncJobResult, jobInProcess, ServerInfo, devid, lastRevIdVar, lastRevId, logs, syncLogMsg, syncLogErr, syncLogData, total, executed, chunks, lastSyncDate, tableLogs, syncJobLoop, _err;
 
@@ -25676,8 +25663,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                       appVersion: this.appVersion,
                       changes: logs
                     }).toPromise().then(function (data) {
-                      return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this143, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee237() {
-                        var _this144 = this;
+                      return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this142, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee237() {
+                        var _this143 = this;
 
                         var _iterator12, _step12, chckFailure, chgLen, ci, chg, currRevId, _err2, objInsertData, newItem, objUpdateData, hasCodeMod, updItem, replaceSuccess, _i15, _Object$values, logData, _i16, _Object$values2, _logData;
 
@@ -25800,7 +25787,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                                 syncJobResult.setStatus(SyncJobStatus.WriteServerReChanges);
                                 _context239.next = 48;
                                 return Promise.all(data.serverRechanges.map(function (chg) {
-                                  return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this144, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee236() {
+                                  return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this143, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee236() {
                                     return regeneratorRuntime.wrap(function _callee236$(_context238) {
                                       while (1) {
                                         switch (_context238.prev = _context238.next) {
@@ -26183,7 +26170,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "getUnsyncedChangeLogsByJobId",
         value: function getUnsyncedChangeLogsByJobId(jobid) {
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee242() {
-            var _this145 = this;
+            var _this144 = this;
 
             var tablePrio, db;
             return regeneratorRuntime.wrap(function _callee242$(_context244) {
@@ -26197,7 +26184,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                     }).filter(function (itm) {
                       return !('sync_done' in itm) || itm.sync_done === 0;
                     }).toArray().then(function (list) {
-                      return _this145.sortAndFixChangeLogs(list);
+                      return _this144.sortAndFixChangeLogs(list);
                     }));
 
                   case 3:
@@ -26211,7 +26198,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "sortAndFixChangeLogs",
         value: function sortAndFixChangeLogs(list) {
-          var _this146 = this;
+          var _this145 = this;
 
           console.log('DbSyncClientService #866 sortAndFixChangeLogs', Object.assign({}, list));
           var tablePrio = ['inventar', 'objektKatalogMandant', 'objektKatalogGlobal', 'hersteller'];
@@ -26224,8 +26211,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             }
           });
           return Promise.all(list.map(function (itm) {
-            return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this146, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee244() {
-              var _this147 = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this145, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee244() {
+              var _this146 = this;
 
               var _artikelData2, isEmptyMod, artikelRef, raum;
 
@@ -26348,7 +26335,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                       return db.objektKatalogGlobal.where({
                         uuid: itm.obj.mcuuid
                       }).first().then(function (rslt) {
-                        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this147, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee243() {
+                        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this146, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee243() {
                           var okgItm;
                           return regeneratorRuntime.wrap(function _callee243$(_context245) {
                             while (1) {
@@ -26545,70 +26532,75 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "getIncompleteInventuren",
         value: function getIncompleteInventuren() {
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee249() {
-            var _this148 = this;
+            var _this147 = this;
 
-            var numPending;
+            var currJobId, numPending, uniqJobIds;
             return regeneratorRuntime.wrap(function _callee249$(_context251) {
               while (1) {
                 switch (_context251.prev = _context251.next) {
                   case 0:
-                    _context251.next = 2;
+                    currJobId = this.baseData.getCurrentJobid();
+                    _context251.next = 3;
                     return this.dexieService.clientChangeLog.where({
                       sync_done: 0
                     }).count();
 
-                  case 2:
+                  case 3:
                     numPending = _context251.sent;
-                    return _context251.abrupt("return", this.dexieService.clientChangeLog.where({
-                      sync_done: 0
-                    }).toArray().then(function (list) {
-                      return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this148, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee248() {
-                        var _this149 = this;
 
-                        var currJobId, listGroupedByJobid, groupIds;
+                    if (numPending) {
+                      _context251.next = 6;
+                      break;
+                    }
+
+                    return _context251.abrupt("return", []);
+
+                  case 6:
+                    uniqJobIds = [];
+                    _context251.next = 9;
+                    return this.dexieService.clientChangeLog.where({
+                      sync_done: 0
+                    }).each(function (log) {
+                      if (-1 === uniqJobIds.indexOf(log.jobid)) {
+                        if (log.jobid === currJobId) {
+                          uniqJobIds.unshift(log.jobid);
+                        } else {
+                          uniqJobIds.push(log.jobid);
+                        }
+                      }
+                    });
+
+                  case 9:
+                    return _context251.abrupt("return", Promise.all(uniqJobIds.map(function (jobid) {
+                      return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this147, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee248() {
+                        var changes;
                         return regeneratorRuntime.wrap(function _callee248$(_context250) {
                           while (1) {
                             switch (_context250.prev = _context250.next) {
                               case 0:
-                                currJobId = this.baseData.getCurrentJobid();
-                                listGroupedByJobid = [];
-                                listGroupedByJobid.push({
-                                  jobid: currJobId,
-                                  changes: []
+                                _context250.next = 2;
+                                return this.dexieService.clientChangeLog.where({
+                                  jobid: jobid,
+                                  sync_done: 0
+                                }).sortBy('id');
+
+                              case 2:
+                                changes = _context250.sent;
+                                return _context250.abrupt("return", {
+                                  jobid: jobid,
+                                  changes: changes
                                 });
-                                groupIds = [currJobId];
-                                list.forEach(function (item) {
-                                  var jobid = item.jobid;
-                                  var groupIdx = groupIds.indexOf(jobid);
 
-                                  if (groupIdx === -1) {
-                                    groupIds.push(jobid);
-                                    listGroupedByJobid.push({
-                                      jobid: jobid,
-                                      changes: []
-                                    });
-                                    groupIdx = groupIds.indexOf(jobid);
-                                  }
-
-                                  listGroupedByJobid[groupIdx].changes.push(item);
-                                });
-                                return _context250.abrupt("return", Promise.all(Object.keys(listGroupedByJobid).map(function (groupIdx) {
-                                  listGroupedByJobid[groupIdx].changes = _this149.sortAndFixChangeLogs(listGroupedByJobid[groupIdx].changes);
-                                  return groupIdx;
-                                })).then(function () {
-                                  return listGroupedByJobid;
-                                }));
-
-                              case 6:
+                              case 4:
                               case "end":
                                 return _context250.stop();
                             }
                           }
                         }, _callee248, this);
                       }));
-                    }));
+                    })));
 
-                  case 4:
+                  case 10:
                   case "end":
                     return _context251.stop();
                 }
@@ -26620,7 +26612,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "saveLastSyncErrorEvent",
         value: function saveLastSyncErrorEvent(event) {
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee250() {
-            var _this150 = this;
+            var _this148 = this;
 
             var jobid, insertData, delAction;
             return regeneratorRuntime.wrap(function _callee250$(_context252) {
@@ -26648,13 +26640,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                       jobid: jobid
                     })["delete"]();
                     delAction["finally"](function () {
-                      return _this150.dexieService.serverSyncErrors.bulkAdd(insertData);
+                      return _this148.dexieService.serverSyncErrors.bulkAdd(insertData);
                     }).then(function (n) {
                       if (n > 0) {
-                        _this150.resyncServerErrors(jobid);
+                        _this148.resyncServerErrors(jobid);
                       }
                     })["finally"](function () {
-                      _this150.syncErrorChange.emit({
+                      _this148.syncErrorChange.emit({
                         jobid: jobid,
                         count: event.errors.length
                       });
@@ -26672,7 +26664,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "resyncServerErrors",
         value: function resyncServerErrors(jobid) {
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee252() {
-            var _this151 = this;
+            var _this149 = this;
 
             var db, aErrors;
             return regeneratorRuntime.wrap(function _callee252$(_context254) {
@@ -26689,7 +26681,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                   case 4:
                     aErrors = _context254.sent;
                     aErrors.map(function (err) {
-                      return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this151, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee251() {
+                      return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this149, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee251() {
                         var table, uuid, chId, logItem, data, chgLogData;
                         return regeneratorRuntime.wrap(function _callee251$(_context253) {
                           while (1) {
@@ -27248,34 +27240,34 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       var _super = _createSuper(DexieService);
 
       function DexieService(syncClient, baseData) {
-        var _this152;
+        var _this150;
 
         _classCallCheck(this, DexieService);
 
-        _this152 = _super.call(this, database);
-        _this152.syncClient = syncClient;
-        _this152.baseData = baseData;
-        _this152.clientSyncAmountChanged = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
-        _this152.dbVersion = 12;
-        _this152.nextDbVersion = 0;
-        _this152.stopClientLogForServerLoad = false;
-        _this152.nextDbVersion = _this152.dbVersion + 1;
+        _this150 = _super.call(this, database);
+        _this150.syncClient = syncClient;
+        _this150.baseData = baseData;
+        _this150.clientSyncAmountChanged = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        _this150.dbVersion = 12;
+        _this150.nextDbVersion = 0;
+        _this150.stopClientLogForServerLoad = false;
+        _this150.nextDbVersion = _this150.dbVersion + 1;
 
-        _this152.on('versionchange', function (event) {
+        _this150.on('versionchange', function (event) {
           console.log('DexieService #62 event versionchange ', {
             event: event
           });
         });
 
-        _this152.on('message', function (event) {
+        _this150.on('message', function (event) {
           console.log('DexieService #65 event message', {
             event: event
           });
         });
 
-        _this152.init();
+        _this150.init();
 
-        return _this152;
+        return _this150;
       }
 
       _createClass(DexieService, [{
@@ -27337,7 +27329,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "init",
         value: function init() {
-          var _this153 = this;
+          var _this151 = this;
 
           dexie__WEBPACK_IMPORTED_MODULE_2__["default"].Syncable.registerSyncProtocol('inventorySync', this.syncClient);
           this.nextDbVersion = this.dbVersion + 1;
@@ -27379,11 +27371,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             }).upgrade(function (trans) {
               console.log('Starte Upgrade for DB-Version ' + v2);
 
-              _this153.images.toCollection().each(function (img) {
-                _this153.objektKatalogMandant.where({
+              _this151.images.toCollection().each(function (img) {
+                _this151.objektKatalogMandant.where({
                   mcid: img.mcid
                 }).first().then(function (okm) {
-                  _this153.images.where({
+                  _this151.images.where({
                     uuid: img.uuid
                   }).modify({
                     mcuuid: okm.uuid
@@ -27401,11 +27393,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             }).upgrade(function (trans) {
               console.log('Starte Upgrade for DB-Version ' + v3);
 
-              _this153.images.toCollection().each(function (img) {
-                _this153.objektKatalogMandant.where({
+              _this151.images.toCollection().each(function (img) {
+                _this151.objektKatalogMandant.where({
                   mcid: img.mcid
                 }).first().then(function (okm) {
-                  _this153.images.where({
+                  _this151.images.where({
                     uuid: img.uuid
                   }).modify({
                     mcuuid: okm.uuid
@@ -27509,8 +27501,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           var lastClientChangeLogTimer = null;
 
           var lastClientChangeLogTrigger = function lastClientChangeLogTrigger() {
-            _this153.clientChangeLog.count().then(function (num) {
-              _this153.clientSyncAmountChanged.emit(num);
+            _this151.clientChangeLog.count().then(function (num) {
+              _this151.clientSyncAmountChanged.emit(num);
             });
           };
 
@@ -27544,18 +27536,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               }
             });
 
-            if (_this153.stopClientLogForServerLoad) {
+            if (_this151.stopClientLogForServerLoad) {
               // console.log('#145 dexie.service on changes: is disabled for Server-Load');
               return;
             }
 
             changes.forEach(function (change) {
-              if (validLogTables.indexOf(change.table) === -1 || change.table === _this153.clientChangeLog.name) {
+              if (validLogTables.indexOf(change.table) === -1 || change.table === _this151.clientChangeLog.name) {
                 // console.log('#151 dexie.service on changes: ChangeLog disabled for table ', change.table);
                 return;
               }
 
-              _this153.addChangeLog(change);
+              _this151.addChangeLog(change);
             });
           });
         }
@@ -27975,7 +27967,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "assignInventarToRaum",
         value: function assignInventarToRaum(invUuid, ruuid, useJobid) {
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee258() {
-            var _this154 = this;
+            var _this152 = this;
 
             var jobid, uid, devid;
             return regeneratorRuntime.wrap(function _callee258$(_context260) {
@@ -28001,25 +27993,25 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                       });
 
                       if (!inv) {
-                        return _this154.returnResultError({
+                        return _this152.returnResultError({
                           errorCode: InventoryEditorErrorCode.InventarNotFound
                         });
                       }
 
                       if (!raum) {
-                        return _this154.returnResultError({
+                        return _this152.returnResultError({
                           errorCode: InventoryEditorErrorCode.RaumNotFound
                         });
                       }
 
-                      return _this154.dexieService.inventar.update(inv.uuid, {
+                      return _this152.dexieService.inventar.update(inv.uuid, {
                         ruuid: raum.uuid,
                         jobid: jobid,
                         modified_uid: uid,
                         modified_jobid: jobid,
                         modified_device_id: devid
                       }).then(function () {
-                        return _this154.returnResultSuccess();
+                        return _this152.returnResultSuccess();
                       });
                     }));
 
@@ -28035,7 +28027,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "undoAssignedInventarToRaum",
         value: function undoAssignedInventarToRaum(invUuid, ruuid, useJobid) {
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee259() {
-            var _this155 = this;
+            var _this153 = this;
 
             var jobid;
             return regeneratorRuntime.wrap(function _callee259$(_context261) {
@@ -28053,29 +28045,29 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                       if (item.type === 1
                       /* Create */
                       ) {
-                          return _this155.dexieService.inventar["delete"](item.uuid).then(function () {
-                            return _this155.dexieService.clientChangeLog["delete"](item.id);
+                          return _this153.dexieService.inventar["delete"](item.uuid).then(function () {
+                            return _this153.dexieService.clientChangeLog["delete"](item.id);
                           }).then(function () {
-                            return _this155.returnResultSuccess();
+                            return _this153.returnResultSuccess();
                           });
                         } else if (item.type === 2
                       /* Update */
                       ) {
-                          return _this155.dexieService.inventar.update(invUuid, item.oldObj).then(function (num) {
+                          return _this153.dexieService.inventar.update(invUuid, item.oldObj).then(function (num) {
                             if (num > 0) {
-                              return _this155.dexieService.clientChangeLog["delete"](item.id);
+                              return _this153.dexieService.clientChangeLog["delete"](item.id);
                             } else {
                               throw new Error('Cannot undo Raum-Inventar-Zuweisung!');
                             }
                           }).then(function () {
-                            return _this155.returnResultSuccess();
+                            return _this153.returnResultSuccess();
                           })["catch"](function (err) {
-                            return _this155.returnResultError({
+                            return _this153.returnResultError({
                               errorMsg: err
                             });
                           });
                         } else {
-                        return _this155.returnResultError();
+                        return _this153.returnResultError();
                       }
                     }));
 
@@ -28918,7 +28910,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     var VariablesService = /*#__PURE__*/function () {
       function VariablesService(db, baseData) {
-        var _this156 = this;
+        var _this154 = this;
 
         _classCallCheck(this, VariablesService);
 
@@ -28928,24 +28920,24 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.varChanged = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
         this.variables = this.db.variables;
         this.get('Settings.watchVariables', []).then(function (watchVars) {
-          _this156.watchVariables = watchVars;
+          _this154.watchVariables = watchVars;
         });
       }
 
       _createClass(VariablesService, [{
         key: "watch",
         value: function watch() {
-          var _this157 = this;
+          var _this155 = this;
 
           for (var _len9 = arguments.length, watchNames = new Array(_len9), _key9 = 0; _key9 < _len9; _key9++) {
             watchNames[_key9] = arguments[_key9];
           }
 
           watchNames.forEach(function (name) {
-            if (!_this157.watchVariables.find(function (alreadyWatched) {
+            if (!_this155.watchVariables.find(function (alreadyWatched) {
               return alreadyWatched === name;
             })) {
-              _this157.watchVariables.push(name);
+              _this155.watchVariables.push(name);
             }
           });
           this.set('Settings.watchVariables', this.watchVariables);
@@ -29032,7 +29024,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function set(name, value) {
           var logComment = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee269() {
-            var _this158 = this;
+            var _this156 = this;
 
             var oldVal, action, success;
             return regeneratorRuntime.wrap(function _callee269$(_context271) {
@@ -29062,7 +29054,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                       name: name,
                       value: value
                     }).then(function () {
-                      _this158.checkWatchVar(name, action, value, oldVal);
+                      _this156.checkWatchVar(name, action, value, oldVal);
 
                       return true;
                     })["catch"](function (err) {
@@ -29086,7 +29078,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         value: function setRevId(name, value) {
           var logComment = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee270() {
-            var _this159 = this;
+            var _this157 = this;
 
             var oldVal, action, _err3, success;
 
@@ -29133,7 +29125,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                       name: name,
                       value: value
                     }).then(function () {
-                      _this159.checkWatchVar(name, action, value, oldVal);
+                      _this157.checkWatchVar(name, action, value, oldVal);
 
                       return true;
                     })["catch"](function (err) {

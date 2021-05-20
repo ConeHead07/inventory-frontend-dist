@@ -635,7 +635,7 @@ function __classPrivateFieldSet(receiver, privateMap, value) {
 /*! exports provided: name, version, scripts, private, dependencies, devDependencies, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"name\":\"frontend\",\"version\":\"1.0.93\",\"scripts\":{\"ng\":\"ng\",\"start\":\"ng serve --aot --host 0.0.0.0 --disable-host-check\",\"startssl\":\"ng serve --aot --port 4235 --host inventory.local --disable-host-check --ssl true --sslCert=./ssl/localhost.crt --sslKey=./ssl/localhost.key --open\",\"startssl_test\":\"ng serve --host inventory.local --publicHost inventory.local:4200/sockjs-node --disable-host-check --ssl true --sslCert=./ssl/localhost.crt --sslKey=./ssl/localhost.key\",\"prebuild\":\"yarn version --patch\",\"build\":\"ng build\",\"build-prod\":\"ng build --output-path=dist/prod --configuration=production\",\"build-rc\":\"ng build --output-path=dist/rc --configuration=rc\",\"build-dev\":\"ng build --output-path=dist/dev --configuration=dev\",\"firebase-deploy-prod\":\"firebase deploy --only hosting:frontend\",\"firebase-deploy-rc\":\"firebase deploy --only hosting:rc\",\"firebase-deploy-dev\":\"firebase deploy --only hosting:dev\",\"firebase-deploy-all\":\"firebase deploy\",\"startpwaOld\":\"http-server -p 4225 -c-1 dist/frontend -S -C ssh_pem/cert.pem -K ssh_pem/key.pem -o\",\"startpwa\":\"http-server -p 4225 -c-1 dist/frontend -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-rc\":\"http-server -p 4245 -c-1 dist/rc -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-dev\":\"http-server -p 4255 -c-1 dist/dev -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-prod\":\"http-server -p 4265 -c-1 dist/prod -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"buildpwa\":\"yarn run prebuild && ng build --prod --project frontend\",\"rebuild\":\"ng build --prod --project frontend\",\"test\":\"ng test\",\"lint\":\"ng lint\",\"e2e\":\"ng e2e\",\"serve-dist\":\"ts-node node-dist-server.ts\",\"serve-dist-js\":\"node node-dist-server.js\"},\"private\":true,\"dependencies\":{\"@angular/animations\":\"~8.2.14\",\"@angular/common\":\"~8.2.14\",\"@angular/compiler\":\"~8.2.14\",\"@angular/core\":\"~8.2.14\",\"@angular/fire\":\"5.4.2\",\"@angular/forms\":\"~8.2.14\",\"@angular/platform-browser\":\"~8.2.14\",\"@angular/platform-browser-dynamic\":\"~8.2.14\",\"@angular/pwa\":\"^0.1000.5\",\"@angular/router\":\"~8.2.14\",\"@angular/service-worker\":\"~8.2.14\",\"@auth0/angular-jwt\":\"^5.0.2\",\"@fortawesome/angular-fontawesome\":\"0.4.0\",\"@fortawesome/fontawesome-svg-core\":\"^1.2.8\",\"@fortawesome/free-brands-svg-icons\":\"^5.5.0\",\"@fortawesome/free-regular-svg-icons\":\"^5.5.0\",\"@fortawesome/free-solid-svg-icons\":\"^5.5.0\",\"@ng-bootstrap/ng-bootstrap\":\"^5.1.5\",\"@types/crypto-js\":\"3.1.47\",\"@zxing/ngx-scanner\":\"^3.0.0\",\"angular-cropperjs\":\"^1.0.2\",\"bootstrap\":\"^4.4.1\",\"browser-image-compression\":\"^1.0.11\",\"compress\":\"^0.99.0\",\"compressorjs\":\"^1.0.6\",\"cropperjs\":\"^1.5.6\",\"crypto-js\":\"3.3.0\",\"dexie\":\"2.0.4\",\"dexie-observable\":\"1.0.0-beta.7\",\"dexie-relationships\":\"^1.2.11\",\"dexie-syncable\":\"1.0.0-beta.6\",\"es6-shim\":\"^0.35.5\",\"express\":\"^4.17.1\",\"express-cors\":\"0.0.3\",\"faker\":\"^4.1.0\",\"firebase\":\">= 5.5.7 <8\",\"global\":\"^4.4.0\",\"guid-typescript\":\"^1.0.9\",\"json-server\":\"^0.15.1\",\"ngx-toastr\":\"10.0.4\",\"ngx-webcam\":\"0.2.6\",\"rxjs\":\"~6.4.0\",\"ts-md5\":\"^1.2.7\",\"tslib\":\"^1.10.0\",\"web-push\":\"^3.4.4\",\"zone.js\":\"~0.9.1\"},\"devDependencies\":{\"@angular-devkit/architect\":\"<0.900 || ^0.900.0-0 || ^9.0.0-0\",\"@angular-devkit/build-angular\":\"^0.803.23\",\"@angular/cli\":\"8.3.0\",\"@angular/compiler-cli\":\"~8.2.14\",\"@angular/language-service\":\"~8.2.14\",\"@types/browser-image-compression\":\"^1.0.1\",\"@types/jasmine\":\"~3.3.8\",\"@types/jasminewd2\":\"~2.0.3\",\"@types/node\":\"^14.14.22\",\"codelyzer\":\"^5.0.0\",\"express-serve-static-core\":\"^0.1.1\",\"firebase-tools\":\"^7.12.0\",\"fuzzy\":\"^0.1.3\",\"inquirer\":\"^6.2.2\",\"inquirer-autocomplete-prompt\":\"^1.0.1\",\"jasmine-core\":\"~3.4.0\",\"jasmine-spec-reporter\":\"~4.2.1\",\"karma\":\"~4.1.0\",\"karma-chrome-launcher\":\"~2.2.0\",\"karma-coverage-istanbul-reporter\":\"~2.0.1\",\"karma-jasmine\":\"~2.0.1\",\"karma-jasmine-html-reporter\":\"^1.4.0\",\"moment\":\"^2.24.0\",\"protractor\":\"~5.4.0\",\"reflect-metadata\":\"^0.1.13\",\"spa-http-server\":\"^0.9.0\",\"ts-node\":\"^8.8.2\",\"tslint\":\"~5.15.0\",\"typescript\":\"~3.5.3\"}}");
+module.exports = JSON.parse("{\"name\":\"frontend\",\"version\":\"1.0.95\",\"scripts\":{\"ng\":\"ng\",\"start\":\"ng serve --aot --host 0.0.0.0 --disable-host-check\",\"startssl\":\"ng serve --aot --port 4235 --host inventory.local --disable-host-check --ssl true --sslCert=./ssl/localhost.crt --sslKey=./ssl/localhost.key --open\",\"startssl_test\":\"ng serve --host inventory.local --publicHost inventory.local:4200/sockjs-node --disable-host-check --ssl true --sslCert=./ssl/localhost.crt --sslKey=./ssl/localhost.key\",\"prebuild\":\"yarn version --patch\",\"build\":\"ng build\",\"build-prod\":\"ng build --output-path=dist/prod --configuration=production\",\"build-rc\":\"ng build --output-path=dist/rc --configuration=rc\",\"build-dev\":\"ng build --output-path=dist/dev --configuration=dev\",\"firebase-deploy-prod\":\"firebase deploy --only hosting:frontend\",\"firebase-deploy-rc\":\"firebase deploy --only hosting:rc\",\"firebase-deploy-dev\":\"firebase deploy --only hosting:dev\",\"firebase-deploy-all\":\"firebase deploy\",\"startpwaOld\":\"http-server -p 4225 -c-1 dist/frontend -S -C ssh_pem/cert.pem -K ssh_pem/key.pem -o\",\"startpwa\":\"http-server -p 4225 -c-1 dist/frontend -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-rc\":\"http-server -p 4245 -c-1 dist/rc -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-dev\":\"http-server -p 4255 -c-1 dist/dev -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-prod\":\"http-server -p 4265 -c-1 dist/prod -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"buildpwa\":\"yarn run prebuild && ng build --prod --project frontend\",\"rebuild\":\"ng build --prod --project frontend\",\"test\":\"ng test\",\"lint\":\"ng lint\",\"e2e\":\"ng e2e\",\"serve-dist\":\"ts-node node-dist-server.ts\",\"serve-dist-js\":\"node node-dist-server.js\"},\"private\":true,\"dependencies\":{\"@angular/animations\":\"~8.2.14\",\"@angular/common\":\"~8.2.14\",\"@angular/compiler\":\"~8.2.14\",\"@angular/core\":\"~8.2.14\",\"@angular/fire\":\"5.4.2\",\"@angular/forms\":\"~8.2.14\",\"@angular/platform-browser\":\"~8.2.14\",\"@angular/platform-browser-dynamic\":\"~8.2.14\",\"@angular/pwa\":\"^0.1000.5\",\"@angular/router\":\"~8.2.14\",\"@angular/service-worker\":\"~8.2.14\",\"@auth0/angular-jwt\":\"^5.0.2\",\"@fortawesome/angular-fontawesome\":\"0.4.0\",\"@fortawesome/fontawesome-svg-core\":\"^1.2.8\",\"@fortawesome/free-brands-svg-icons\":\"^5.5.0\",\"@fortawesome/free-regular-svg-icons\":\"^5.5.0\",\"@fortawesome/free-solid-svg-icons\":\"^5.5.0\",\"@ng-bootstrap/ng-bootstrap\":\"^5.1.5\",\"@types/crypto-js\":\"3.1.47\",\"@zxing/ngx-scanner\":\"^3.0.0\",\"angular-cropperjs\":\"^1.0.2\",\"bootstrap\":\"^4.4.1\",\"browser-image-compression\":\"^1.0.11\",\"compress\":\"^0.99.0\",\"compressorjs\":\"^1.0.6\",\"cropperjs\":\"^1.5.6\",\"crypto-js\":\"3.3.0\",\"dexie\":\"2.0.4\",\"dexie-observable\":\"1.0.0-beta.7\",\"dexie-relationships\":\"^1.2.11\",\"dexie-syncable\":\"1.0.0-beta.6\",\"es6-shim\":\"^0.35.5\",\"express\":\"^4.17.1\",\"express-cors\":\"0.0.3\",\"faker\":\"^4.1.0\",\"firebase\":\">= 5.5.7 <8\",\"global\":\"^4.4.0\",\"guid-typescript\":\"^1.0.9\",\"json-server\":\"^0.15.1\",\"ngx-toastr\":\"10.0.4\",\"ngx-webcam\":\"0.2.6\",\"rxjs\":\"~6.4.0\",\"ts-md5\":\"^1.2.7\",\"tslib\":\"^1.10.0\",\"web-push\":\"^3.4.4\",\"zone.js\":\"~0.9.1\"},\"devDependencies\":{\"@angular-devkit/architect\":\"<0.900 || ^0.900.0-0 || ^9.0.0-0\",\"@angular-devkit/build-angular\":\"^0.803.23\",\"@angular/cli\":\"8.3.0\",\"@angular/compiler-cli\":\"~8.2.14\",\"@angular/language-service\":\"~8.2.14\",\"@types/browser-image-compression\":\"^1.0.1\",\"@types/jasmine\":\"~3.3.8\",\"@types/jasminewd2\":\"~2.0.3\",\"@types/node\":\"^14.14.22\",\"codelyzer\":\"^5.0.0\",\"express-serve-static-core\":\"^0.1.1\",\"firebase-tools\":\"^7.12.0\",\"fuzzy\":\"^0.1.3\",\"inquirer\":\"^6.2.2\",\"inquirer-autocomplete-prompt\":\"^1.0.1\",\"jasmine-core\":\"~3.4.0\",\"jasmine-spec-reporter\":\"~4.2.1\",\"karma\":\"~4.1.0\",\"karma-chrome-launcher\":\"~2.2.0\",\"karma-coverage-istanbul-reporter\":\"~2.0.1\",\"karma-jasmine\":\"~2.0.1\",\"karma-jasmine-html-reporter\":\"^1.4.0\",\"moment\":\"^2.24.0\",\"protractor\":\"~5.4.0\",\"reflect-metadata\":\"^0.1.13\",\"spa-http-server\":\"^0.9.0\",\"ts-node\":\"^8.8.2\",\"tslint\":\"~5.15.0\",\"typescript\":\"~3.5.3\"}}");
 
 /***/ }),
 
@@ -5047,7 +5047,7 @@ let InventFormComponent = class InventFormComponent {
         });
     }
     openEditArtikelImage() {
-        const modalRef = this.modalService.open(_modals_create_artikel_image_create_artikel_image_component__WEBPACK_IMPORTED_MODULE_11__["CreateArtikelImageComponent"], { size: 'xl', scrollable: true });
+        const modalRef = this.modalService.open(_modals_create_artikel_image_create_artikel_image_component__WEBPACK_IMPORTED_MODULE_11__["CreateArtikelImageComponent"], { size: 'xl' });
         this.modalWatch(modalRef, 'CreateArtikelImage');
         modalRef.componentInstance.name = this.formInventar.Bezeichnung + '/' + this.formInventar.Typ;
         modalRef.componentInstance.setMetaData({
@@ -5062,7 +5062,7 @@ let InventFormComponent = class InventFormComponent {
         });
     }
     openShowArtikelImage() {
-        const modalRef = this.modalService.open(_modals_show_artikel_image_show_artikel_image_component__WEBPACK_IMPORTED_MODULE_12__["ShowArtikelImageComponent"], { size: 'xl', scrollable: true });
+        const modalRef = this.modalService.open(_modals_show_artikel_image_show_artikel_image_component__WEBPACK_IMPORTED_MODULE_12__["ShowArtikelImageComponent"], { size: 'xl' });
         this.modalWatch(modalRef, 'ShowArtikelImage');
         modalRef.componentInstance.name = 'World';
         console.log('openShowArtikelImage #642 setMcuuid: ', this.formInventar.mcuuid);
@@ -5092,7 +5092,7 @@ let InventFormComponent = class InventFormComponent {
     }
     openBatchScans(barcodes, inputElm) {
         console.log('InventFormComponent.openBatchScans(', barcodes, ') #778', { barcodes, inputElm });
-        const modalRef = this.modalService.open(_modals_batch_barcodes_batch_barcodes_component__WEBPACK_IMPORTED_MODULE_34__["BatchBarcodesComponent"], { size: 'xl', scrollable: true });
+        const modalRef = this.modalService.open(_modals_batch_barcodes_batch_barcodes_component__WEBPACK_IMPORTED_MODULE_34__["BatchBarcodesComponent"], { size: 'xl' });
         this.modalWatch(modalRef, 'BatchBarcodes');
         if (!modalRef.componentInstance.jobid) {
             modalRef.componentInstance.setJobid(this.jobid);
@@ -5215,7 +5215,7 @@ let InventFormComponent = class InventFormComponent {
         });
     }
     openSelectCreateArtikel(settings = null) {
-        const modalRef = this.modalService.open(_modals_select_create_artikel_select_create_artikel_component__WEBPACK_IMPORTED_MODULE_8__["SelectCreateArtikelComponent"], { size: 'xl', scrollable: true });
+        const modalRef = this.modalService.open(_modals_select_create_artikel_select_create_artikel_component__WEBPACK_IMPORTED_MODULE_8__["SelectCreateArtikelComponent"], { size: 'xl' }); // , scrollable: true } );
         this.modalWatch(modalRef, 'SelectCreateArtikel');
         modalRef.componentInstance.name = 'World';
         modalRef.componentInstance.clientId = this.clientID;
@@ -5232,7 +5232,7 @@ let InventFormComponent = class InventFormComponent {
         return modalRef.componentInstance;
     }
     openSelectSearchArtikel() {
-        const modalRef = this.modalService.open(_modals_select_search_artikel_select_search_artikel_component__WEBPACK_IMPORTED_MODULE_13__["SelectSearchArtikelComponent"], { size: 'xl', scrollable: true });
+        const modalRef = this.modalService.open(_modals_select_search_artikel_select_search_artikel_component__WEBPACK_IMPORTED_MODULE_13__["SelectSearchArtikelComponent"], { size: 'xl' });
         this.modalWatch(modalRef, 'SelectSearchArtikel');
         modalRef.componentInstance.clientId = this.clientID;
         modalRef.componentInstance.artikelSelected.subscribe((item) => {
@@ -5245,7 +5245,7 @@ let InventFormComponent = class InventFormComponent {
         });
     }
     openSelectSearchRaum() {
-        const modalRef = this.modalService.open(_modals_select_search_raum_select_search_raum_component__WEBPACK_IMPORTED_MODULE_17__["SelectSearchRaumComponent"], { size: 'xl', scrollable: true });
+        const modalRef = this.modalService.open(_modals_select_search_raum_select_search_raum_component__WEBPACK_IMPORTED_MODULE_17__["SelectSearchRaumComponent"], { size: 'xl' });
         this.modalWatch(modalRef, 'SelectSearchRaum');
         modalRef.componentInstance.gebaeudeId = this.buildingID;
         modalRef.componentInstance.raumSelected.subscribe((raum) => {
@@ -5257,7 +5257,7 @@ let InventFormComponent = class InventFormComponent {
         });
     }
     openEditRaum() {
-        const modalRef = this.modalService.open(_modals_edit_raum_edit_raum_component__WEBPACK_IMPORTED_MODULE_28__["EditRaumComponent"], { size: 'xl', scrollable: true });
+        const modalRef = this.modalService.open(_modals_edit_raum_edit_raum_component__WEBPACK_IMPORTED_MODULE_28__["EditRaumComponent"], { size: 'xl' });
         this.modalWatch(modalRef, 'EditRaum');
         modalRef.componentInstance.raumUuid = this.roomUuiD;
         modalRef.componentInstance.raumChanged.subscribe((raum) => {
@@ -5268,7 +5268,7 @@ let InventFormComponent = class InventFormComponent {
         });
     }
     openEditInventar() {
-        const modalRef = this.modalService.open(_modals_edit_inventar_edit_inventar_component__WEBPACK_IMPORTED_MODULE_30__["EditInventarComponent"], { size: 'xl', scrollable: true });
+        const modalRef = this.modalService.open(_modals_edit_inventar_edit_inventar_component__WEBPACK_IMPORTED_MODULE_30__["EditInventarComponent"], { size: 'xl' });
         this.modalWatch(modalRef, 'EditInventar');
         console.log('InventFormComponente #715 this.inventarData ' + this.inventarData.inventar.uuid);
         modalRef.componentInstance.inventarUuid = this.inventarData.inventar.uuid;
@@ -5282,7 +5282,7 @@ let InventFormComponent = class InventFormComponent {
         });
     }
     openSelectCreateRaum() {
-        const modalRef = this.modalService.open(_modals_select_create_raum_select_create_raum_component__WEBPACK_IMPORTED_MODULE_14__["SelectCreateRaumComponent"], { size: 'xl', scrollable: true });
+        const modalRef = this.modalService.open(_modals_select_create_raum_select_create_raum_component__WEBPACK_IMPORTED_MODULE_14__["SelectCreateRaumComponent"], { size: 'xl' });
         this.modalWatch(modalRef, 'SelectCreateRaum');
         this.openedCreateRaum = true;
         modalRef.componentInstance.gebaeudeId = this.buildingID;
@@ -13966,21 +13966,15 @@ let DBSyncClientService = DBSyncClientService_1 = class DBSyncClientService {
             this.autoSyncStop();
         }
         // Sync im 1-Minuten-Takt
-        if (this.dbgLog) {
-            console.log(logTi + (new Date()).toTimeString() + ' setInterval this.sync, ' + this.syncIntervalTime + 'ms');
-        }
+        console.log(logTi + (new Date()).toTimeString() + ' setInterval this.sync, ' + this.syncIntervalTime + 'ms');
         const syncFunction = this.sync.bind(this);
         this.syncIntervalTimer = setInterval(() => {
-            if (this.dbgLog) {
-                console.log(logTi + (new Date()).toTimeString() + ' interval execute this.sync.bind');
-            }
+            console.log(logTi + (new Date()).toTimeString() + ' interval execute this.sync.bind');
             syncFunction();
         }, this.syncIntervalTime);
         this.autoSyncChange.emit(true);
         if (startNow) {
-            if (this.dbgLog) {
-                console.log(logTi + (new Date()).toTimeString() + ' startNow before interval starts in ' + this.syncIntervalTime + 'ms');
-            }
+            console.log(logTi + (new Date()).toTimeString() + ' startNow before interval starts in ' + this.syncIntervalTime + 'ms');
             this.sync();
         }
     }
@@ -13997,48 +13991,51 @@ let DBSyncClientService = DBSyncClientService_1 = class DBSyncClientService {
     sync() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
             const logTi = 'DbsyncClientService.sync()';
+            const currJobId = this.baseData.getCurrentJobid();
+            console.log('DBSyncClientService.sync() #377 STARTED currJobId(', currJobId, ') at ' + (new Date()).toLocaleString());
             if (!this.networkService.getCurrentState().hasServerAccess) {
+                console.error(logTi + ' #379 ABORT No-Internet-Access');
                 return;
             }
             const isDBSyncService = (this instanceof DBSyncClientService_1);
             if (this.isInDebugMode) {
-                console.log(logTi + ' #376 this is DBSyncClientService', { isDBSyncService });
+                console.log(logTi + ' #384 this is DBSyncClientService', { isDBSyncService });
             }
             if (!isDBSyncService) {
-                console.error(logTi + ' #379 this is not correct binded to Instance of DBSyncClientService');
+                console.error(logTi + ' #387 this is not correct binded to Instance of DBSyncClientService');
                 return;
             }
-            const currJobId = this.baseData.getCurrentJobid();
-            console.log('DBSyncClientService.sync() #366 currJobId:', currJobId);
             if (this.isInDebugMode) {
-                console.log('DBSyncClientService.sync() #368 call getIncompleteInventuren()');
+                console.log(logTi + ' #392 call getIncompleteInventuren()');
             }
             let incompleteInventurLogs = yield this.getIncompleteInventuren();
+            console.log(logTi + ' #389 no changes of currJobId(' + currJobId + ')', { incompleteInventurLogs });
             const currJobIdx = incompleteInventurLogs.map(itm => itm.jobid).indexOf(currJobId);
             if (this.isInDebugMode) {
-                console.log('DBSyncClientService.sync() #374 currJobIdx: ', currJobIdx);
+                console.log(logTi + ' #398 currJobIdx: ', currJobIdx);
             }
             if (currJobIdx !== -1) {
                 if (this.isInDebugMode) {
-                    console.log('DBSyncClientService.sync() #379');
+                    console.log(logTi + ' #403');
                 }
                 const currJob = incompleteInventurLogs[currJobIdx];
                 incompleteInventurLogs = incompleteInventurLogs.slice(currJobIdx, 1);
-                if (this.isInDebugMode) {
-                    console.log('DBSyncClientService.sync() #384 call sendByJobId(', currJob.jobid, currJob.changes, ')');
-                }
+                console.log(logTi + ' #407 call sendByJobId(', currJob.jobid, currJob.changes, ')');
                 yield this.sendByJobId(currJob.jobid, currJob.changes);
+            }
+            else {
+                console.log(logTi + ' #410 no changes of currJobId(' + currJobId + ')');
             }
             for (const logs of incompleteInventurLogs) {
                 if (logs.jobid === currJobId) {
                     continue;
                 }
                 if (this.isInDebugMode) {
-                    console.log('DBSyncClientService.sync() #391 call sendByJobId(', logs.jobid, logs.changes, ')');
+                    console.log(logTi + ' #418 call sendByJobId(', logs.jobid, logs.changes, ')');
                 }
                 yield this.sendByJobId(logs.jobid, logs.changes);
             }
-            console.log('DBSyncClientService.sync() # 395 END');
+            console.log(logTi + ' #423 END');
         });
     }
     getCurrentClientRevId() {
@@ -14631,36 +14628,30 @@ let DBSyncClientService = DBSyncClientService_1 = class DBSyncClientService {
     }
     getIncompleteInventuren() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            const currJobId = this.baseData.getCurrentJobid();
             const numPending = yield this.dexieService.clientChangeLog.where({ sync_done: 0 }).count();
-            return this.dexieService.clientChangeLog
-                .where({ sync_done: 0 })
-                .toArray()
-                .then((list) => tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-                const currJobId = this.baseData.getCurrentJobid();
-                const listGroupedByJobid = [];
-                listGroupedByJobid.push({
-                    jobid: currJobId,
-                    changes: []
-                });
-                const groupIds = [currJobId];
-                list.forEach(item => {
-                    const jobid = item.jobid;
-                    let groupIdx = groupIds.indexOf(jobid);
-                    if (groupIdx === -1) {
-                        groupIds.push(jobid);
-                        listGroupedByJobid.push({
-                            jobid,
-                            changes: []
-                        });
-                        groupIdx = groupIds.indexOf(jobid);
+            if (!numPending) {
+                return [];
+            }
+            const uniqJobIds = [];
+            yield this.dexieService.clientChangeLog.where({ sync_done: 0 }).each((log) => {
+                if (-1 === uniqJobIds.indexOf(log.jobid)) {
+                    if (log.jobid === currJobId) {
+                        uniqJobIds.unshift(log.jobid);
                     }
-                    listGroupedByJobid[groupIdx].changes.push(item);
-                });
-                return Promise.all(Object.keys(listGroupedByJobid).map((groupIdx) => {
-                    listGroupedByJobid[groupIdx].changes = this.sortAndFixChangeLogs(listGroupedByJobid[groupIdx].changes);
-                    return groupIdx;
-                })).then(() => listGroupedByJobid);
-            }));
+                    else {
+                        uniqJobIds.push(log.jobid);
+                    }
+                }
+            });
+            return Promise.all(uniqJobIds.map((jobid) => tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+                const changes = yield this.dexieService.clientChangeLog
+                    .where({ jobid, sync_done: 0 }).sortBy('id');
+                return {
+                    jobid,
+                    changes
+                };
+            })));
         });
     }
     saveLastSyncErrorEvent(event) {
