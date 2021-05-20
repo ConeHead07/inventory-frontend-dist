@@ -1217,7 +1217,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   function packageJson(module) {
-    module.exports = JSON.parse("{\"name\":\"frontend\",\"version\":\"1.0.97\",\"scripts\":{\"ng\":\"ng\",\"start\":\"ng serve --aot --host 0.0.0.0 --disable-host-check\",\"startssl\":\"ng serve --aot --port 4235 --host inventory.local --disable-host-check --ssl true --sslCert=./ssl/localhost.crt --sslKey=./ssl/localhost.key --open\",\"startssl_test\":\"ng serve --host inventory.local --publicHost inventory.local:4200/sockjs-node --disable-host-check --ssl true --sslCert=./ssl/localhost.crt --sslKey=./ssl/localhost.key\",\"prebuild-xxx\":\"yarn version --patch\",\"build\":\"ng build\",\"build-prod\":\"ng build --output-path=dist/prod --configuration=production\",\"build-rc\":\"ng build --output-path=dist/rc --configuration=rc\",\"build-dev\":\"ng build --output-path=dist/dev --configuration=dev\",\"firebase-deploy-prod\":\"firebase deploy --only hosting:frontend\",\"firebase-deploy-rc\":\"firebase deploy --only hosting:rc\",\"firebase-deploy-dev\":\"firebase deploy --only hosting:dev\",\"firebase-deploy-all\":\"firebase deploy\",\"startpwaOld\":\"http-server -p 4225 -c-1 dist/frontend -S -C ssh_pem/cert.pem -K ssh_pem/key.pem -o\",\"startpwa\":\"http-server -p 4225 -c-1 dist/frontend -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-rc\":\"http-server -p 4245 -c-1 dist/rc -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-dev\":\"http-server -p 4255 -c-1 dist/dev -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-prod\":\"http-server -p 4265 -c-1 dist/prod -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"buildpwa\":\"yarn run prebuild && ng build --prod --project frontend\",\"rebuild\":\"ng build --prod --project frontend\",\"test\":\"ng test\",\"lint\":\"ng lint\",\"e2e\":\"ng e2e\",\"serve-dist\":\"ts-node node-dist-server.ts\",\"serve-dist-js\":\"node node-dist-server.js\"},\"private\":true,\"dependencies\":{\"@angular/animations\":\"~8.2.14\",\"@angular/common\":\"~8.2.14\",\"@angular/compiler\":\"~8.2.14\",\"@angular/core\":\"~8.2.14\",\"@angular/fire\":\"5.4.2\",\"@angular/forms\":\"~8.2.14\",\"@angular/platform-browser\":\"~8.2.14\",\"@angular/platform-browser-dynamic\":\"~8.2.14\",\"@angular/pwa\":\"^0.1000.5\",\"@angular/router\":\"~8.2.14\",\"@angular/service-worker\":\"~8.2.14\",\"@auth0/angular-jwt\":\"^5.0.2\",\"@fortawesome/angular-fontawesome\":\"0.4.0\",\"@fortawesome/fontawesome-svg-core\":\"^1.2.8\",\"@fortawesome/free-brands-svg-icons\":\"^5.5.0\",\"@fortawesome/free-regular-svg-icons\":\"^5.5.0\",\"@fortawesome/free-solid-svg-icons\":\"^5.5.0\",\"@ng-bootstrap/ng-bootstrap\":\"^5.1.5\",\"@types/crypto-js\":\"3.1.47\",\"@zxing/ngx-scanner\":\"^3.0.0\",\"angular-cropperjs\":\"^1.0.2\",\"bootstrap\":\"^4.4.1\",\"browser-image-compression\":\"^1.0.11\",\"compress\":\"^0.99.0\",\"compressorjs\":\"^1.0.6\",\"cropperjs\":\"^1.5.6\",\"crypto-js\":\"3.3.0\",\"dexie\":\"2.0.4\",\"dexie-observable\":\"1.0.0-beta.7\",\"dexie-relationships\":\"^1.2.11\",\"dexie-syncable\":\"1.0.0-beta.6\",\"es6-shim\":\"^0.35.5\",\"express\":\"^4.17.1\",\"express-cors\":\"0.0.3\",\"faker\":\"^4.1.0\",\"firebase\":\">= 5.5.7 <8\",\"global\":\"^4.4.0\",\"guid-typescript\":\"^1.0.9\",\"json-server\":\"^0.15.1\",\"ngx-toastr\":\"10.0.4\",\"ngx-webcam\":\"0.2.6\",\"rxjs\":\"~6.4.0\",\"ts-md5\":\"^1.2.7\",\"tslib\":\"^1.10.0\",\"web-push\":\"^3.4.4\",\"zone.js\":\"~0.9.1\"},\"devDependencies\":{\"@angular-devkit/architect\":\"<0.900 || ^0.900.0-0 || ^9.0.0-0\",\"@angular-devkit/build-angular\":\"^0.803.23\",\"@angular/cli\":\"8.3.0\",\"@angular/compiler-cli\":\"~8.2.14\",\"@angular/language-service\":\"~8.2.14\",\"@types/browser-image-compression\":\"^1.0.1\",\"@types/jasmine\":\"~3.3.8\",\"@types/jasminewd2\":\"~2.0.3\",\"@types/node\":\"^14.14.22\",\"codelyzer\":\"^5.0.0\",\"express-serve-static-core\":\"^0.1.1\",\"firebase-tools\":\"^7.12.0\",\"fuzzy\":\"^0.1.3\",\"inquirer\":\"^6.2.2\",\"inquirer-autocomplete-prompt\":\"^1.0.1\",\"jasmine-core\":\"~3.4.0\",\"jasmine-spec-reporter\":\"~4.2.1\",\"karma\":\"~4.1.0\",\"karma-chrome-launcher\":\"~2.2.0\",\"karma-coverage-istanbul-reporter\":\"~2.0.1\",\"karma-jasmine\":\"~2.0.1\",\"karma-jasmine-html-reporter\":\"^1.4.0\",\"moment\":\"^2.24.0\",\"protractor\":\"~5.4.0\",\"reflect-metadata\":\"^0.1.13\",\"spa-http-server\":\"^0.9.0\",\"ts-node\":\"^8.8.2\",\"tslint\":\"~5.15.0\",\"typescript\":\"~3.5.3\"}}");
+    module.exports = JSON.parse("{\"name\":\"frontend\",\"version\":\"1.0.9702\",\"scripts\":{\"ng\":\"ng\",\"start\":\"ng serve --aot --host 0.0.0.0 --disable-host-check\",\"startssl\":\"ng serve --aot --port 4235 --host inventory.local --disable-host-check --ssl true --sslCert=./ssl/localhost.crt --sslKey=./ssl/localhost.key --open\",\"startssl_test\":\"ng serve --host inventory.local --publicHost inventory.local:4200/sockjs-node --disable-host-check --ssl true --sslCert=./ssl/localhost.crt --sslKey=./ssl/localhost.key\",\"prebuild-xxx\":\"yarn version --patch\",\"build\":\"ng build\",\"build-prod\":\"ng build --output-path=dist/prod --configuration=production\",\"build-rc\":\"ng build --output-path=dist/rc --configuration=rc\",\"build-dev\":\"ng build --output-path=dist/dev --configuration=dev\",\"firebase-deploy-prod\":\"firebase deploy --only hosting:frontend\",\"firebase-deploy-rc\":\"firebase deploy --only hosting:rc\",\"firebase-deploy-dev\":\"firebase deploy --only hosting:dev\",\"firebase-deploy-all\":\"firebase deploy\",\"startpwaOld\":\"http-server -p 4225 -c-1 dist/frontend -S -C ssh_pem/cert.pem -K ssh_pem/key.pem -o\",\"startpwa\":\"http-server -p 4225 -c-1 dist/frontend -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-rc\":\"http-server -p 4245 -c-1 dist/rc -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-dev\":\"http-server -p 4255 -c-1 dist/dev -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-prod\":\"http-server -p 4265 -c-1 dist/prod -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"buildpwa\":\"yarn run prebuild && ng build --prod --project frontend\",\"rebuild\":\"ng build --prod --project frontend\",\"test\":\"ng test\",\"lint\":\"ng lint\",\"e2e\":\"ng e2e\",\"serve-dist\":\"ts-node node-dist-server.ts\",\"serve-dist-js\":\"node node-dist-server.js\"},\"private\":true,\"dependencies\":{\"@angular/animations\":\"~8.2.14\",\"@angular/common\":\"~8.2.14\",\"@angular/compiler\":\"~8.2.14\",\"@angular/core\":\"~8.2.14\",\"@angular/fire\":\"5.4.2\",\"@angular/forms\":\"~8.2.14\",\"@angular/platform-browser\":\"~8.2.14\",\"@angular/platform-browser-dynamic\":\"~8.2.14\",\"@angular/pwa\":\"^0.1000.5\",\"@angular/router\":\"~8.2.14\",\"@angular/service-worker\":\"~8.2.14\",\"@auth0/angular-jwt\":\"^5.0.2\",\"@fortawesome/angular-fontawesome\":\"0.4.0\",\"@fortawesome/fontawesome-svg-core\":\"^1.2.8\",\"@fortawesome/free-brands-svg-icons\":\"^5.5.0\",\"@fortawesome/free-regular-svg-icons\":\"^5.5.0\",\"@fortawesome/free-solid-svg-icons\":\"^5.5.0\",\"@ng-bootstrap/ng-bootstrap\":\"^5.1.5\",\"@types/crypto-js\":\"3.1.47\",\"@zxing/ngx-scanner\":\"^3.0.0\",\"angular-cropperjs\":\"^1.0.2\",\"bootstrap\":\"^4.4.1\",\"browser-image-compression\":\"^1.0.11\",\"compress\":\"^0.99.0\",\"compressorjs\":\"^1.0.6\",\"cropperjs\":\"^1.5.6\",\"crypto-js\":\"3.3.0\",\"dexie\":\"2.0.4\",\"dexie-observable\":\"1.0.0-beta.7\",\"dexie-relationships\":\"^1.2.11\",\"dexie-syncable\":\"1.0.0-beta.6\",\"es6-shim\":\"^0.35.5\",\"express\":\"^4.17.1\",\"express-cors\":\"0.0.3\",\"faker\":\"^4.1.0\",\"firebase\":\">= 5.5.7 <8\",\"global\":\"^4.4.0\",\"guid-typescript\":\"^1.0.9\",\"json-server\":\"^0.15.1\",\"ngx-toastr\":\"10.0.4\",\"ngx-webcam\":\"0.2.6\",\"rxjs\":\"~6.4.0\",\"ts-md5\":\"^1.2.7\",\"tslib\":\"^1.10.0\",\"web-push\":\"^3.4.4\",\"zone.js\":\"~0.9.1\"},\"devDependencies\":{\"@angular-devkit/architect\":\"<0.900 || ^0.900.0-0 || ^9.0.0-0\",\"@angular-devkit/build-angular\":\"^0.803.23\",\"@angular/cli\":\"8.3.0\",\"@angular/compiler-cli\":\"~8.2.14\",\"@angular/language-service\":\"~8.2.14\",\"@types/browser-image-compression\":\"^1.0.1\",\"@types/jasmine\":\"~3.3.8\",\"@types/jasminewd2\":\"~2.0.3\",\"@types/node\":\"^14.14.22\",\"codelyzer\":\"^5.0.0\",\"express-serve-static-core\":\"^0.1.1\",\"firebase-tools\":\"^7.12.0\",\"fuzzy\":\"^0.1.3\",\"inquirer\":\"^6.2.2\",\"inquirer-autocomplete-prompt\":\"^1.0.1\",\"jasmine-core\":\"~3.4.0\",\"jasmine-spec-reporter\":\"~4.2.1\",\"karma\":\"~4.1.0\",\"karma-chrome-launcher\":\"~2.2.0\",\"karma-coverage-istanbul-reporter\":\"~2.0.1\",\"karma-jasmine\":\"~2.0.1\",\"karma-jasmine-html-reporter\":\"^1.4.0\",\"moment\":\"^2.24.0\",\"protractor\":\"~5.4.0\",\"reflect-metadata\":\"^0.1.13\",\"spa-http-server\":\"^0.9.0\",\"ts-node\":\"^8.8.2\",\"tslint\":\"~5.15.0\",\"typescript\":\"~3.5.3\"}}");
     /***/
   },
 
@@ -25500,6 +25500,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
                     if (this.isInDebugMode) {
                       console.log("DBSyncClientService.sendByJobId(".concat(jobid, ") #537. Abbruch. Sync l\xE4uft bereits"));
+                      console.log('jobInProcess.jobid:', jobInProcess.jobid);
+                      console.log('jobInProcess.status:', jobInProcess.status);
+                      console.log('jobInProcess.starttime:', jobInProcess.starttime);
+                      console.log('jobInProcess.duration:', jobInProcess.duration);
+                      console.log('jobInProcess.synced:', jobInProcess.synced);
+                      console.log('jobInProcess.numServerChanges:', jobInProcess.numServerChanges);
+                      console.log('jobInProcess.finished:', jobInProcess.finished);
+                      console.log('jobInProcess.committed:', jobInProcess.committed);
+                      console.log('jobInProcess.errorMsg:', jobInProcess.errorMsg);
                     }
 
                     syncJobResult.alreadyStartedProcess = jobInProcess;
@@ -25602,7 +25611,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
                   case 54:
                     if (!(!syncJobResult.finished && syncJobLoop < 20)) {
-                      _context240.next = 79;
+                      _context240.next = 80;
                       break;
                     }
 
@@ -25657,7 +25666,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                     syncLogMsg('Download Daten ...');
                     syncJobResult.committed = logs.length;
                     lastSyncDate = new Date();
-                    _context240.next = 77;
+                    console.log(logTi + ' #640 Start Sending SyncData to ', "api/sync/syncWithRevisionId/".concat(jobid));
+                    _context240.next = 78;
                     return this.apiService.post("api/sync/syncWithRevisionId/".concat(jobid), {
                       jobid: jobid,
                       devid: devid,
@@ -25675,9 +25685,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                             switch (_context239.prev = _context239.next) {
                               case 0:
                                 chunks++;
+                                console.log(logTi + ' #654 Process SyncData-Response', "api/sync/syncWithRevisionId/".concat(jobid));
 
                                 if (!('errorMsg' in data && data.errorMsg)) {
-                                  _context239.next = 6;
+                                  _context239.next = 7;
                                   break;
                                 }
 
@@ -25686,7 +25697,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                                 syncLogErr('Download Fehler: ' + data.errorMsg);
                                 return _context239.abrupt("return", this.finishProcess(syncJobResult, SyncJobStatus.ServerAnsweredWithErrors));
 
-                              case 6:
+                              case 7:
                                 this.saveLastSyncErrorEvent({
                                   jobid: jobid,
                                   startDate: lastSyncDate,
@@ -25709,85 +25720,85 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                                 console.log(logTi + ' #577 Process sync_done');
 
                                 if (!(data.aSyncedChangeIds && data.aSyncedChangeIds.length > 0)) {
-                                  _context239.next = 19;
+                                  _context239.next = 20;
                                   break;
                                 }
 
                                 syncLogMsg('Entferne vom Server bestätige Client-Logs ...');
                                 syncJobResult.setStatus(SyncJobStatus.WriteServerSyncedIds);
-                                _context239.next = 17;
+                                _context239.next = 18;
                                 return this.dexieService.clientChangeLog.where('id').anyOf(data.aSyncedChangeIds).modify({
                                   sync_done: 1
                                 });
 
-                              case 17:
-                                _context239.next = 19;
+                              case 18:
+                                _context239.next = 20;
                                 return this.dexieService.clientChangeLog.where({
                                   sync_done: 1
                                 })["delete"]();
 
-                              case 19:
+                              case 20:
                                 if (!(data.aFailedChangeIds && data.aFailedChangeIds.length > 0)) {
-                                  _context239.next = 42;
+                                  _context239.next = 43;
                                   break;
                                 }
 
                                 syncJobResult.errorMsg += 'Num Failed Server-Syncs: ' + data.aFailedChangeIds.length + '.\n';
                                 _iterator12 = _createForOfIteratorHelper(data.aFailedChangeIds);
-                                _context239.prev = 22;
+                                _context239.prev = 23;
 
                                 _iterator12.s();
 
-                              case 24:
+                              case 25:
                                 if ((_step12 = _iterator12.n()).done) {
-                                  _context239.next = 34;
+                                  _context239.next = 35;
                                   break;
                                 }
 
                                 chckFailure = _step12.value;
                                 _context239.t0 = chckFailure.reason;
-                                _context239.next = _context239.t0 === 'INSERT_ALREADY_EXISTS' ? 29 : _context239.t0 === 'NEWER_VERSION_ON_SERVER' ? 29 : 32;
+                                _context239.next = _context239.t0 === 'INSERT_ALREADY_EXISTS' ? 30 : _context239.t0 === 'NEWER_VERSION_ON_SERVER' ? 30 : 33;
                                 break;
 
-                              case 29:
-                                _context239.next = 31;
+                              case 30:
+                                _context239.next = 32;
                                 return this.dexieService.clientChangeLog["delete"](chckFailure.id);
 
-                              case 31:
-                                return _context239.abrupt("break", 32);
-
                               case 32:
-                                _context239.next = 24;
+                                return _context239.abrupt("break", 33);
+
+                              case 33:
+                                _context239.next = 25;
                                 break;
 
-                              case 34:
-                                _context239.next = 39;
+                              case 35:
+                                _context239.next = 40;
                                 break;
 
-                              case 36:
-                                _context239.prev = 36;
-                                _context239.t1 = _context239["catch"](22);
+                              case 37:
+                                _context239.prev = 37;
+                                _context239.t1 = _context239["catch"](23);
 
                                 _iterator12.e(_context239.t1);
 
-                              case 39:
-                                _context239.prev = 39;
+                              case 40:
+                                _context239.prev = 40;
 
                                 _iterator12.f();
 
-                                return _context239.finish(39);
+                                return _context239.finish(40);
 
-                              case 42:
+                              case 43:
                                 console.log(logTi + ' #603 Process serverRechanges');
 
                                 if (!(data.serverRechanges && data.serverRechanges.length > 0)) {
-                                  _context239.next = 48;
+                                  _context239.next = 49;
                                   break;
                                 }
 
                                 syncLogMsg('Korrigiere Client-Ids nach Server-Antwort ...');
                                 syncJobResult.setStatus(SyncJobStatus.WriteServerReChanges);
-                                _context239.next = 48;
+                                _context239.next = 49;
                                 return Promise.all(data.serverRechanges.map(function (chg) {
                                   return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this143, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee236() {
                                     return regeneratorRuntime.wrap(function _callee236$(_context238) {
@@ -25809,13 +25820,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                                   }));
                                 }));
 
-                              case 48:
+                              case 49:
                                 if (this.isInDebugMode) {
                                   console.log(logTi + ' #614 Process serverChanges');
                                 }
 
                                 if (!(data.serverChanges.rows && data.serverChanges.rows.length > 0)) {
-                                  _context239.next = 104;
+                                  _context239.next = 105;
                                   break;
                                 }
 
@@ -25824,9 +25835,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                                 chgLen = data.serverChanges.rows.length;
                                 ci = 0;
 
-                              case 54:
+                              case 55:
                                 if (!(ci < chgLen)) {
-                                  _context239.next = 104;
+                                  _context239.next = 105;
                                   break;
                                 }
 
@@ -25834,7 +25845,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                                 currRevId = chg.revision_id;
 
                                 if (!(currRevId < lastRevId)) {
-                                  _context239.next = 61;
+                                  _context239.next = 62;
                                   break;
                                 }
 
@@ -25842,7 +25853,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                                 console.error(_err2);
                                 return _context239.abrupt("return", this.finishProcess(syncJobResult, SyncJobStatus.Aborted, 'Server-Aenderungen sind nicht streng nach RevId sortiert!'));
 
-                              case 61:
+                              case 62:
                                 chg.table = chg.table[0].toLowerCase() + chg.table.substr(1);
 
                                 if (!(chg.table in tableLogs)) {
@@ -25860,10 +25871,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                                 }
 
                                 _context239.t2 = chg.type;
-                                _context239.next = _context239.t2 === 1 ? 66 : _context239.t2 === 2 ? 73 : _context239.t2 === 3 ? 90 : 94;
+                                _context239.next = _context239.t2 === 1 ? 67 : _context239.t2 === 2 ? 74 : _context239.t2 === 3 ? 91 : 95;
                                 break;
 
-                              case 66:
+                              case 67:
                                 // Insert
                                 tableLogs[chg.table].puts++;
                                 objInsertData = Object.assign({}, JSON.parse(chg.obj), {
@@ -25874,10 +25885,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                                   console.log(logTi + ' #651 ' + ci + '/' + chgLen + ' insert into ' + chg.table + ' ', objInsertData);
                                 }
 
-                                _context239.next = 71;
+                                _context239.next = 72;
                                 return this.dexieService.table(chg.table).put(objInsertData);
 
-                              case 71:
+                              case 72:
                                 if (['inventar', 'raeume', 'objektKatalogMandant'].indexOf(chg.table) > -1) {
                                   newItem = objInsertData;
                                   this.bcLookupService.addBarcode({
@@ -25889,9 +25900,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                                   });
                                 }
 
-                                return _context239.abrupt("break", 94);
+                                return _context239.abrupt("break", 95);
 
-                              case 73:
+                              case 74:
                                 // Update
                                 tableLogs[chg.table].modified++;
                                 objUpdateData = Object.assign({}, JSON.parse(chg.mods), {
@@ -25903,14 +25914,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                                   console.log(logTi + ' #671 ' + ci + '/' + chgLen + ' hasCodeMod: ', hasCodeMod, objUpdateData);
                                 }
 
-                                _context239.next = 79;
+                                _context239.next = 80;
                                 return this.dexieService.table(chg.table).where({
                                   uuid: chg.uuid
                                 }).modify(objUpdateData);
 
-                              case 79:
+                              case 80:
                                 if (!(['inventar', 'raeume', 'objektKatalogMandant'].indexOf(chg.table) > -1 && 'code' in objUpdateData)) {
-                                  _context239.next = 88;
+                                  _context239.next = 89;
                                   break;
                                 }
 
@@ -25920,7 +25931,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                                   console.log(logTi + ' #682 Run Barcode-Update ', hasCodeMod, objUpdateData);
                                 }
 
-                                _context239.next = 84;
+                                _context239.next = 85;
                                 return this.bcLookupService.replaceBarcodeByUuid(chg.uuid, {
                                   code: updItem.code,
                                   for_jobid: jobid,
@@ -25929,7 +25940,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                                   uuid: chg.uuid
                                 });
 
-                              case 84:
+                              case 85:
                                 replaceSuccess = _context239.sent;
 
                                 if (this.isInDebugMode) {
@@ -25938,10 +25949,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                                   });
                                 }
 
-                                _context239.next = 89;
+                                _context239.next = 90;
                                 break;
 
-                              case 88:
+                              case 89:
                                 if (this.isInDebugMode) {
                                   console.log(logTi + ' #692 No-Barcode-Update ', hasCodeMod, {
                                     chg: chg,
@@ -25949,10 +25960,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                                   });
                                 }
 
-                              case 89:
-                                return _context239.abrupt("break", 94);
-
                               case 90:
+                                return _context239.abrupt("break", 95);
+
+                              case 91:
                                 // Delete
                                 tableLogs[chg.table].deleted++;
 
@@ -25960,12 +25971,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                                   console.log(logTi + ' #700 ' + ci + '/' + chgLen + ' dbsync-client delete ' + chg.table + ' by uuid ' + chg.uuid);
                                 }
 
-                                _context239.next = 94;
+                                _context239.next = 95;
                                 return this.dexieService.table(chg.table).where({
                                   uuid: chg.uuid
                                 })["delete"]();
 
-                              case 94:
+                              case 95:
                                 executed++;
                                 tableLogs[chg.table].executed++;
                                 lastRevId = currRevId;
@@ -25974,10 +25985,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                                   console.log(logTi + ' #710 ' + ci + '/' + chgLen + ' this.settings.set(', lastRevIdVar, chg.revision_id, ')');
                                 }
 
-                                _context239.next = 100;
+                                _context239.next = 101;
                                 return this.settings.setRevId(lastRevIdVar, chg.revision_id, 'LogRow ' + ci + '/' + chgLen + '; RevId ' + currRevId);
 
-                              case 100:
+                              case 101:
                                 if (executed === total || executed % 100 === 0) {
                                   for (_i15 = 0, _Object$values = Object.values(tableLogs); _i15 < _Object$values.length; _i15++) {
                                     logData = _Object$values[_i15];
@@ -25989,17 +26000,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                                   }
                                 }
 
-                              case 101:
+                              case 102:
                                 ci++;
-                                _context239.next = 54;
+                                _context239.next = 55;
                                 break;
 
-                              case 104:
+                              case 105:
                                 console.log(logTi + ' #725 Process SyncResponse finished');
-                                _context239.next = 107;
+                                _context239.next = 108;
                                 return this.settings.get(lastRevIdVar);
 
-                              case 107:
+                              case 108:
                                 syncJobResult.revisionId = _context239.sent;
                                 syncJobResult.committed = logs ? logs.length : 0;
                                 syncJobResult.synced = data.aSyncedChangeIds ? data.aSyncedChangeIds.length : 0;
@@ -26015,35 +26026,35 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                                 }
 
                                 if (!(data.serverChanges.rows.length < data.serverChanges.total)) {
-                                  _context239.next = 118;
+                                  _context239.next = 119;
                                   break;
                                 }
 
                                 console.log(logTi + ' #741 keep SyncProcess(jobid: ' + syncJobResult.jobid + ') open');
                                 return _context239.abrupt("return", syncJobResult);
 
-                              case 118:
+                              case 119:
                                 console.log(logTi + ' #744 finish SyncProcess(jobid: ' + syncJobResult.jobid + ')');
                                 syncLogMsg('Aktuelle Synchronisation wurde abgeschlossen');
                                 return _context239.abrupt("return", this.finishProcess(syncJobResult, SyncJobStatus.Finished));
 
-                              case 121:
+                              case 122:
                               case "end":
                                 return _context239.stop();
                             }
                           }
-                        }, _callee237, this, [[22, 36, 39, 42]]);
+                        }, _callee237, this, [[23, 37, 40, 43]]);
                       }));
                     });
 
-                  case 77:
+                  case 78:
                     _context240.next = 54;
                     break;
 
-                  case 79:
+                  case 80:
                     this.isInDebugMode = origDebugMode;
 
-                  case 80:
+                  case 81:
                   case "end":
                     return _context240.stop();
                 }
