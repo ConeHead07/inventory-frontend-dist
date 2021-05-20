@@ -119,7 +119,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div *ngIf=\"currInventur\">\r\n  <div class=\"card mt-1\">\r\n    <div class=\"card-header\">Aktuelle Inventur: {{ currInventur.Titel }}</div>\r\n    <div class=\"card-body\">\r\n      <h5 class=\"card-title\"></h5>\r\n      <div class=\"row\">\r\n        <div class=\"col-3\">Titel</div>\r\n        <div class=\"col\">{{ currInventur.Titel }}</div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-3\">Inventur-ID (Jobid)</div>\r\n        <div class=\"col\">{{ currInventur.jobid }}</div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-3\">Mandant-ID</div>\r\n        <div class=\"col\">{{ currInventur.mid }}</div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-3\">Created</div>\r\n        <div class=\"col\">{{ currInventur.created_at }}</div>\r\n      </div>\r\n\r\n      <div *ngIf=\"currUser\" class=\"row\">\r\n        <div class=\"col\">User</div>\r\n        <div class=\"col\">{{ currUser.email }}</div>\r\n      </div>\r\n\r\n    </div>\r\n    <div class=\"card-footer\">\r\n      <button [disabled]=\"syncInProcess\" class=\"btn btn-danger\" (click)=\"resetCurrJob()\">Inventurdaten komplett neu laden</button>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"card mt-2\">\r\n  <div class=\"card-header\">Synchronisierung</div>\r\n  <div class=\"card-body\">\r\n    <h4 class=\"card-title\">Aktueller Status</h4>\r\n    <div class=\"row\">\r\n      <div class=\"col-3\">Client-Revision-ID</div>\r\n      <div class=\"col\">{{ clientRevisionId }}</div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-3\">Unsynced Changes</div>\r\n      <div class=\"col\">{{ numUnsyncedChanges }}</div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-3\">Server-Revision-ID</div>\r\n      <div class=\"col\">{{ serverRevisionId }}</div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-3\">Server-Changes</div>\r\n      <div class=\"col\">{{ numServerChanges }}</div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-3\">Status</div>\r\n      <div class=\"col\">{{syncStatusName}} ({{syncStatus}})</div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-3\">Finished</div>\r\n      <div class=\"col\">{{syncFinished | json }}</div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-3\">Auto-Run</div>\r\n      <div class=\"col\">{{ syncAutoRun | json }}</div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-footer\">\r\n    <button *ngIf=\"syncAutoRun\" class=\"btn btn-danger\" (click)=\"syncAutoStop()\"> Autmatische Synchronisierung stoppen</button>\r\n    <button *ngIf=\"!syncAutoRun\" class=\"btn btn-success\" (click)=\"syncAutoStart()\"> Autmatische Synchronisierung starten</button>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"card mt-2\" *ngIf=\"currProcess\">\r\n  <div class=\"card-header\">Laufender Prozess</div>\r\n  <div class=\"card-body\">\r\n    <div class=\"row\">\r\n      <div class=\"col\">Status</div>\r\n      <div class=\"col\">{{ syncStatusName }}</div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col\">Start</div>\r\n      <div class=\"col\">{{ currProcess.starttime | date }}</div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"card mt-2\" *ngIf=\"lastServerSyncErrors.length > 0\">\r\n  <div class=\"card-header\">Synchronisations-Fehler</div>\r\n  <h4 class=\"card-title\">Fehler bei letzter Synchroniserung\r\n    (InventurId: {{ lastServerSyncJobid}}) um {{ lastServerSyncDate | date }}</h4>\r\n  Anzahl: {{ lastServerSyncErrors.length }}<br>\r\n\r\n    <table class=\"table table-striped\">\r\n      <thead>\r\n      <tr>\r\n        <th scope=\"col\">#</th>\r\n        <th scope=\"col\">Table</th>\r\n        <th scope=\"col\">Log-Id</th>\r\n        <th scope=\"col\">Aktion</th>\r\n        <th scope=\"col\">Fehlercode</th>\r\n        <th scope=\"col\">Fehlermeldung</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n      <tr *ngFor=\"let item of lastServerSyncErrors; index as i\">\r\n        <th scope=\"row\">{{ i + 1 }}</th>\r\n        <td>{{ item.table }}</td>\r\n        <td>{{ item.clientChangeLogId | number }}</td>\r\n        <td>{{ item.type | number }}</td>\r\n        <td>{{ item.error_code }}</td>\r\n        <td>{{ item.error_msg }}</td>\r\n      </tr>\r\n      </tbody>\r\n    </table>\r\n    * type: 1=Insert, 2=Update, 3=Delete\r\n</div>\r\n\r\n<div class=\"card mt-2\" id=\"totalProgress\" *ngIf=\"syncTotal && syncTotal.total\">\r\n  <p><ngb-progressbar [striped]=\"true\" [animated]=\"true\" [value]=\"syncTotal.percent\"></ngb-progressbar></p>\r\n  <div class=\"row\">\r\n    <div class=\"col\">{{ syncTotal.executed }}</div>\r\n    <div class=\"col\">von {{ syncTotal.total }}</div>\r\n    <div class=\"col pull-right\">{{ syncTotal.percent }} %</div>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"card mt-2\" id=\"tableProgress\" *ngIf=\"syncTables && syncTables.length > 0\">\r\n  <div class=\"row\" *ngFor=\"let st of syncTables; let stIdx = index\">\r\n    <div class=\"col\">{{ st.total }}</div>\r\n    <div class=\"col\">{{ st.puts }}</div>\r\n    <div class=\"col\">{{ st.modified }}</div>\r\n    <div class=\"col\">{{ st.deleted }}</div>\r\n    <div class=\"col\">{{ st.executed }}</div>\r\n  </div>\r\n</div>\r\n\r\n\r\n\r\n";
+    __webpack_exports__["default"] = "<div *ngIf=\"currInventur\">\r\n  <div class=\"card mt-1\">\r\n    <div class=\"card-header\">Aktuelle Inventur: {{ currInventur.Titel }}</div>\r\n    <div class=\"card-body\">\r\n      <h5 class=\"card-title\"></h5>\r\n      <div class=\"row\">\r\n        <div class=\"col-3\">Titel</div>\r\n        <div class=\"col\">{{ currInventur.Titel }}</div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-3\">Inventur-ID (Jobid)</div>\r\n        <div class=\"col\">{{ currInventur.jobid }}</div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-3\">Mandant-ID</div>\r\n        <div class=\"col\">{{ currInventur.mid }}</div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-3\">Created</div>\r\n        <div class=\"col\">{{ currInventur.created_at }}</div>\r\n      </div>\r\n\r\n      <div *ngIf=\"currUser\" class=\"row\">\r\n        <div class=\"col\">User</div>\r\n        <div class=\"col\">{{ currUser.email }}</div>\r\n      </div>\r\n\r\n    </div>\r\n    <div class=\"card-footer\">\r\n      <button [disabled]=\"syncInProcess\" class=\"btn btn-danger\" (click)=\"resetCurrJob()\">Inventurdaten komplett neu laden</button>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"card mt-2\">\r\n  <div class=\"card-header\">Synchronisierung</div>\r\n  <div class=\"card-body\">\r\n    <h4 class=\"card-title\">Aktueller Status</h4>\r\n    <div class=\"row\">\r\n      <div class=\"col-3\">Client-Revision-ID</div>\r\n      <div class=\"col\">{{ clientRevisionId }}</div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-3\">Unsynced Changes</div>\r\n      <div class=\"col\">{{ numUnsyncedChanges }}</div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-3\">Server-Revision-ID</div>\r\n      <div class=\"col\">{{ serverRevisionId }}</div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-3\">Server-Changes</div>\r\n      <div class=\"col\">{{ numServerChanges }}</div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-3\">Status</div>\r\n      <div class=\"col\">{{syncStatusName}} ({{syncStatus}})</div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-3\">Finished</div>\r\n      <div class=\"col\">{{syncFinished | json }}</div>\r\n    </div>\r\n\r\n    <div class=\"row\">\r\n      <div class=\"col-3\">Auto-Run</div>\r\n      <div class=\"col\">{{ syncAutoRun | json }}</div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-footer\">\r\n    <button *ngIf=\"syncAutoRun\" class=\"btn btn-danger\" (click)=\"syncAutoStop()\"> Autmatische Synchronisierung stoppen</button>\r\n    <button *ngIf=\"!syncAutoRun\" class=\"btn btn-success\" (click)=\"syncAutoStart()\"> Autmatische Synchronisierung starten</button>\r\n    <button *ngIf=\"syncAutoRun\" class=\"btn btn-danger\" (click)=\"forceSendCurrJob()\"> Jetzt versenden</button>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"card mt-2\" *ngIf=\"currProcess\">\r\n  <div class=\"card-header\">Laufender Prozess</div>\r\n  <div class=\"card-body\">\r\n    <div class=\"row\">\r\n      <div class=\"col\">Status</div>\r\n      <div class=\"col\">{{ syncStatusName }}</div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col\">Start</div>\r\n      <div class=\"col\">{{ currProcess.starttime | date: 'yyyy-MM-dd HH:mm:ss' }}</div>\r\n    </div>\r\n  </div>\r\n  <div class=\"card-footer\">\r\n    <button *ngIf=\"syncAutoRun\" class=\"btn btn-danger\" (click)=\"cancelCurrJob()\"> Laufenden Prozess verwerfen</button>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"card mt-2\" *ngIf=\"lastServerSyncErrors.length > 0\">\r\n  <div class=\"card-header\">Synchronisations-Fehler</div>\r\n  <h4 class=\"card-title\">Fehler bei letzter Synchroniserung\r\n    (InventurId: {{ lastServerSyncJobid}}) um {{ lastServerSyncDate | date }}</h4>\r\n  Anzahl: {{ lastServerSyncErrors.length }}<br>\r\n\r\n    <table class=\"table table-striped\">\r\n      <thead>\r\n      <tr>\r\n        <th scope=\"col\">#</th>\r\n        <th scope=\"col\">Table</th>\r\n        <th scope=\"col\">Log-Id</th>\r\n        <th scope=\"col\">Aktion</th>\r\n        <th scope=\"col\">Fehlercode</th>\r\n        <th scope=\"col\">Fehlermeldung</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n      <tr *ngFor=\"let item of lastServerSyncErrors; index as i\">\r\n        <th scope=\"row\">{{ i + 1 }}</th>\r\n        <td>{{ item.table }}</td>\r\n        <td>{{ item.clientChangeLogId | number }}</td>\r\n        <td>{{ item.type | number }}</td>\r\n        <td>{{ item.error_code }}</td>\r\n        <td>{{ item.error_msg }}</td>\r\n      </tr>\r\n      </tbody>\r\n    </table>\r\n    * type: 1=Insert, 2=Update, 3=Delete\r\n</div>\r\n\r\n<div class=\"card mt-2\" id=\"totalProgress\" *ngIf=\"syncTotal && syncTotal.total\">\r\n  <p><ngb-progressbar [striped]=\"true\" [animated]=\"true\" [value]=\"syncTotal.percent\"></ngb-progressbar></p>\r\n  <div class=\"row\">\r\n    <div class=\"col\">{{ syncTotal.executed }}</div>\r\n    <div class=\"col\">von {{ syncTotal.total }}</div>\r\n    <div class=\"col pull-right\">{{ syncTotal.percent }} %</div>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"card mt-2\" id=\"tableProgress\" *ngIf=\"syncTables && syncTables.length > 0\">\r\n  <div class=\"row\" *ngFor=\"let st of syncTables; let stIdx = index\">\r\n    <div class=\"col\">{{ st.total }}</div>\r\n    <div class=\"col\">{{ st.puts }}</div>\r\n    <div class=\"col\">{{ st.modified }}</div>\r\n    <div class=\"col\">{{ st.deleted }}</div>\r\n    <div class=\"col\">{{ st.executed }}</div>\r\n  </div>\r\n</div>\r\n\r\n\r\n\r\n";
     /***/
   },
 
@@ -1217,7 +1217,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   function packageJson(module) {
-    module.exports = JSON.parse("{\"name\":\"frontend\",\"version\":\"1.0.9706\",\"scripts\":{\"ng\":\"ng\",\"start\":\"ng serve --aot --host 0.0.0.0 --disable-host-check\",\"startssl\":\"ng serve --aot --port 4235 --host inventory.local --disable-host-check --ssl true --sslCert=./ssl/localhost.crt --sslKey=./ssl/localhost.key --open\",\"startssl_test\":\"ng serve --host inventory.local --publicHost inventory.local:4200/sockjs-node --disable-host-check --ssl true --sslCert=./ssl/localhost.crt --sslKey=./ssl/localhost.key\",\"prebuild-xxx\":\"yarn version --patch\",\"build\":\"ng build\",\"build-prod\":\"ng build --output-path=dist/prod --configuration=production\",\"build-rc\":\"ng build --output-path=dist/rc --configuration=rc\",\"build-dev\":\"ng build --output-path=dist/dev --configuration=dev\",\"firebase-deploy-prod\":\"firebase deploy --only hosting:frontend\",\"firebase-deploy-rc\":\"firebase deploy --only hosting:rc\",\"firebase-deploy-dev\":\"firebase deploy --only hosting:dev\",\"firebase-deploy-all\":\"firebase deploy\",\"startpwaOld\":\"http-server -p 4225 -c-1 dist/frontend -S -C ssh_pem/cert.pem -K ssh_pem/key.pem -o\",\"startpwa\":\"http-server -p 4225 -c-1 dist/frontend -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-rc\":\"http-server -p 4245 -c-1 dist/rc -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-dev\":\"http-server -p 4255 -c-1 dist/dev -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-prod\":\"http-server -p 4265 -c-1 dist/prod -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"buildpwa\":\"yarn run prebuild && ng build --prod --project frontend\",\"rebuild\":\"ng build --prod --project frontend\",\"test\":\"ng test\",\"lint\":\"ng lint\",\"e2e\":\"ng e2e\",\"serve-dist\":\"ts-node node-dist-server.ts\",\"serve-dist-js\":\"node node-dist-server.js\"},\"private\":true,\"dependencies\":{\"@angular/animations\":\"~8.2.14\",\"@angular/common\":\"~8.2.14\",\"@angular/compiler\":\"~8.2.14\",\"@angular/core\":\"~8.2.14\",\"@angular/fire\":\"5.4.2\",\"@angular/forms\":\"~8.2.14\",\"@angular/platform-browser\":\"~8.2.14\",\"@angular/platform-browser-dynamic\":\"~8.2.14\",\"@angular/pwa\":\"^0.1000.5\",\"@angular/router\":\"~8.2.14\",\"@angular/service-worker\":\"~8.2.14\",\"@auth0/angular-jwt\":\"^5.0.2\",\"@fortawesome/angular-fontawesome\":\"0.4.0\",\"@fortawesome/fontawesome-svg-core\":\"^1.2.8\",\"@fortawesome/free-brands-svg-icons\":\"^5.5.0\",\"@fortawesome/free-regular-svg-icons\":\"^5.5.0\",\"@fortawesome/free-solid-svg-icons\":\"^5.5.0\",\"@ng-bootstrap/ng-bootstrap\":\"^5.1.5\",\"@types/crypto-js\":\"3.1.47\",\"@zxing/ngx-scanner\":\"^3.0.0\",\"angular-cropperjs\":\"^1.0.2\",\"bootstrap\":\"^4.4.1\",\"browser-image-compression\":\"^1.0.11\",\"compress\":\"^0.99.0\",\"compressorjs\":\"^1.0.6\",\"cropperjs\":\"^1.5.6\",\"crypto-js\":\"3.3.0\",\"dexie\":\"2.0.4\",\"dexie-observable\":\"1.0.0-beta.7\",\"dexie-relationships\":\"^1.2.11\",\"dexie-syncable\":\"1.0.0-beta.6\",\"es6-shim\":\"^0.35.5\",\"express\":\"^4.17.1\",\"express-cors\":\"0.0.3\",\"faker\":\"^4.1.0\",\"firebase\":\">= 5.5.7 <8\",\"global\":\"^4.4.0\",\"guid-typescript\":\"^1.0.9\",\"json-server\":\"^0.15.1\",\"ngx-toastr\":\"10.0.4\",\"ngx-webcam\":\"0.2.6\",\"rxjs\":\"~6.4.0\",\"ts-md5\":\"^1.2.7\",\"tslib\":\"^1.10.0\",\"web-push\":\"^3.4.4\",\"zone.js\":\"~0.9.1\"},\"devDependencies\":{\"@angular-devkit/architect\":\"<0.900 || ^0.900.0-0 || ^9.0.0-0\",\"@angular-devkit/build-angular\":\"^0.803.23\",\"@angular/cli\":\"8.3.0\",\"@angular/compiler-cli\":\"~8.2.14\",\"@angular/language-service\":\"~8.2.14\",\"@types/browser-image-compression\":\"^1.0.1\",\"@types/jasmine\":\"~3.3.8\",\"@types/jasminewd2\":\"~2.0.3\",\"@types/node\":\"^14.14.22\",\"codelyzer\":\"^5.0.0\",\"express-serve-static-core\":\"^0.1.1\",\"firebase-tools\":\"^7.12.0\",\"fuzzy\":\"^0.1.3\",\"inquirer\":\"^6.2.2\",\"inquirer-autocomplete-prompt\":\"^1.0.1\",\"jasmine-core\":\"~3.4.0\",\"jasmine-spec-reporter\":\"~4.2.1\",\"karma\":\"~4.1.0\",\"karma-chrome-launcher\":\"~2.2.0\",\"karma-coverage-istanbul-reporter\":\"~2.0.1\",\"karma-jasmine\":\"~2.0.1\",\"karma-jasmine-html-reporter\":\"^1.4.0\",\"moment\":\"^2.24.0\",\"protractor\":\"~5.4.0\",\"reflect-metadata\":\"^0.1.13\",\"spa-http-server\":\"^0.9.0\",\"ts-node\":\"^8.8.2\",\"tslint\":\"~5.15.0\",\"typescript\":\"~3.5.3\"}}");
+    module.exports = JSON.parse("{\"name\":\"frontend\",\"version\":\"1.0.9707\",\"scripts\":{\"ng\":\"ng\",\"start\":\"ng serve --aot --host 0.0.0.0 --disable-host-check\",\"startssl\":\"ng serve --aot --port 4235 --host inventory.local --disable-host-check --ssl true --sslCert=./ssl/localhost.crt --sslKey=./ssl/localhost.key --open\",\"startssl_test\":\"ng serve --host inventory.local --publicHost inventory.local:4200/sockjs-node --disable-host-check --ssl true --sslCert=./ssl/localhost.crt --sslKey=./ssl/localhost.key\",\"prebuild-xxx\":\"yarn version --patch\",\"build\":\"ng build\",\"build-prod\":\"ng build --output-path=dist/prod --configuration=production\",\"build-rc\":\"ng build --output-path=dist/rc --configuration=rc\",\"build-dev\":\"ng build --output-path=dist/dev --configuration=dev\",\"firebase-deploy-prod\":\"firebase deploy --only hosting:frontend\",\"firebase-deploy-rc\":\"firebase deploy --only hosting:rc\",\"firebase-deploy-dev\":\"firebase deploy --only hosting:dev\",\"firebase-deploy-all\":\"firebase deploy\",\"startpwaOld\":\"http-server -p 4225 -c-1 dist/frontend -S -C ssh_pem/cert.pem -K ssh_pem/key.pem -o\",\"startpwa\":\"http-server -p 4225 -c-1 dist/frontend -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-rc\":\"http-server -p 4245 -c-1 dist/rc -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-dev\":\"http-server -p 4255 -c-1 dist/dev -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-prod\":\"http-server -p 4265 -c-1 dist/prod -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"buildpwa\":\"yarn run prebuild && ng build --prod --project frontend\",\"rebuild\":\"ng build --prod --project frontend\",\"test\":\"ng test\",\"lint\":\"ng lint\",\"e2e\":\"ng e2e\",\"serve-dist\":\"ts-node node-dist-server.ts\",\"serve-dist-js\":\"node node-dist-server.js\"},\"private\":true,\"dependencies\":{\"@angular/animations\":\"~8.2.14\",\"@angular/common\":\"~8.2.14\",\"@angular/compiler\":\"~8.2.14\",\"@angular/core\":\"~8.2.14\",\"@angular/fire\":\"5.4.2\",\"@angular/forms\":\"~8.2.14\",\"@angular/platform-browser\":\"~8.2.14\",\"@angular/platform-browser-dynamic\":\"~8.2.14\",\"@angular/pwa\":\"^0.1000.5\",\"@angular/router\":\"~8.2.14\",\"@angular/service-worker\":\"~8.2.14\",\"@auth0/angular-jwt\":\"^5.0.2\",\"@fortawesome/angular-fontawesome\":\"0.4.0\",\"@fortawesome/fontawesome-svg-core\":\"^1.2.8\",\"@fortawesome/free-brands-svg-icons\":\"^5.5.0\",\"@fortawesome/free-regular-svg-icons\":\"^5.5.0\",\"@fortawesome/free-solid-svg-icons\":\"^5.5.0\",\"@ng-bootstrap/ng-bootstrap\":\"^5.1.5\",\"@types/crypto-js\":\"3.1.47\",\"@zxing/ngx-scanner\":\"^3.0.0\",\"angular-cropperjs\":\"^1.0.2\",\"bootstrap\":\"^4.4.1\",\"browser-image-compression\":\"^1.0.11\",\"compress\":\"^0.99.0\",\"compressorjs\":\"^1.0.6\",\"cropperjs\":\"^1.5.6\",\"crypto-js\":\"3.3.0\",\"dexie\":\"2.0.4\",\"dexie-observable\":\"1.0.0-beta.7\",\"dexie-relationships\":\"^1.2.11\",\"dexie-syncable\":\"1.0.0-beta.6\",\"es6-shim\":\"^0.35.5\",\"express\":\"^4.17.1\",\"express-cors\":\"0.0.3\",\"faker\":\"^4.1.0\",\"firebase\":\">= 5.5.7 <8\",\"global\":\"^4.4.0\",\"guid-typescript\":\"^1.0.9\",\"json-server\":\"^0.15.1\",\"ngx-toastr\":\"10.0.4\",\"ngx-webcam\":\"0.2.6\",\"rxjs\":\"~6.4.0\",\"ts-md5\":\"^1.2.7\",\"tslib\":\"^1.10.0\",\"web-push\":\"^3.4.4\",\"zone.js\":\"~0.9.1\"},\"devDependencies\":{\"@angular-devkit/architect\":\"<0.900 || ^0.900.0-0 || ^9.0.0-0\",\"@angular-devkit/build-angular\":\"^0.803.23\",\"@angular/cli\":\"8.3.0\",\"@angular/compiler-cli\":\"~8.2.14\",\"@angular/language-service\":\"~8.2.14\",\"@types/browser-image-compression\":\"^1.0.1\",\"@types/jasmine\":\"~3.3.8\",\"@types/jasminewd2\":\"~2.0.3\",\"@types/node\":\"^14.14.22\",\"codelyzer\":\"^5.0.0\",\"express-serve-static-core\":\"^0.1.1\",\"firebase-tools\":\"^7.12.0\",\"fuzzy\":\"^0.1.3\",\"inquirer\":\"^6.2.2\",\"inquirer-autocomplete-prompt\":\"^1.0.1\",\"jasmine-core\":\"~3.4.0\",\"jasmine-spec-reporter\":\"~4.2.1\",\"karma\":\"~4.1.0\",\"karma-chrome-launcher\":\"~2.2.0\",\"karma-coverage-istanbul-reporter\":\"~2.0.1\",\"karma-jasmine\":\"~2.0.1\",\"karma-jasmine-html-reporter\":\"^1.4.0\",\"moment\":\"^2.24.0\",\"protractor\":\"~5.4.0\",\"reflect-metadata\":\"^0.1.13\",\"spa-http-server\":\"^0.9.0\",\"ts-node\":\"^8.8.2\",\"tslint\":\"~5.15.0\",\"typescript\":\"~3.5.3\"}}");
     /***/
   },
 
@@ -3153,6 +3153,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "syncAutoStart",
         value: function syncAutoStart() {
           this.dbsyncClient.autoSyncStart(true);
+        }
+      }, {
+        key: "cancelCurrJob",
+        value: function cancelCurrJob() {
+          this.dbsyncClient.removeSyncProcessByJobid(this.jobid);
+          this.currProcess = this.dbsyncClient.getProcessByJobId(this.jobid);
+        }
+      }, {
+        key: "forceSendCurrJob",
+        value: function forceSendCurrJob() {
+          this.dbsyncClient.sendByJobId(this.jobid, null, null, true);
         }
       }, {
         key: "syncCurrJob",
@@ -25001,6 +25012,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           console.log(logTi + ' #333 after add this.processes.length:', this.processes.length);
         }
       }, {
+        key: "removeSyncProcessByJobid",
+        value: function removeSyncProcessByJobid(jobid) {
+          var reason = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+          var proc = this.getProcessByJobId(jobid);
+
+          if (proc) {
+            this.finishProcess(proc, SyncJobStatus.Aborted, '');
+          }
+        }
+      }, {
         key: "autoSyncIsRunning",
         value: function autoSyncIsRunning() {
           return this.syncIntervalTimer !== null;
@@ -25501,6 +25522,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "sendByJobId",
         value: function sendByJobId(useJobid, useLogs, useJobResult) {
+          var force = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee238() {
             var _this142 = this;
 
@@ -25521,7 +25543,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                       return proc.jobid === jobid;
                     });
 
-                    if (!(jobInProcess && !jobInProcess.finished)) {
+                    if (!(!force && jobInProcess && !jobInProcess.finished)) {
                       _context240.next = 12;
                       break;
                     }
@@ -25570,34 +25592,50 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                     }
 
                     syncJobResult.setStatus(SyncJobStatus.AskForServerChanges);
-                    _context240.next = 22;
-                    return this.askServerForChanges();
 
-                  case 22:
-                    ServerInfo = _context240.sent;
-                    devid = this.baseData.getCurrentDeviceId() || 0;
-                    lastRevIdVar = "jobid-".concat(jobid, "-revision-id");
-                    _context240.next = 27;
-                    return this.settings.get(lastRevIdVar);
-
-                  case 27:
-                    _context240.t0 = _context240.sent;
-
-                    if (_context240.t0) {
-                      _context240.next = 30;
+                    if (!force) {
+                      _context240.next = 24;
                       break;
                     }
 
-                    _context240.t0 = 0;
+                    _context240.t0 = {
+                      NumChanges: 1
+                    };
+                    _context240.next = 27;
+                    break;
 
-                  case 30:
-                    lastRevId = _context240.t0;
+                  case 24:
+                    _context240.next = 26;
+                    return this.askServerForChanges();
+
+                  case 26:
+                    _context240.t0 = _context240.sent;
+
+                  case 27:
+                    ServerInfo = _context240.t0;
+                    devid = this.baseData.getCurrentDeviceId() || 0;
+                    lastRevIdVar = "jobid-".concat(jobid, "-revision-id");
+                    _context240.next = 32;
+                    return this.settings.get(lastRevIdVar);
+
+                  case 32:
+                    _context240.t1 = _context240.sent;
+
+                    if (_context240.t1) {
+                      _context240.next = 35;
+                      break;
+                    }
+
+                    _context240.t1 = 0;
+
+                  case 35:
+                    lastRevId = _context240.t1;
                     syncJobResult.setStatus(SyncJobStatus.Pending);
                     this.processStarted.emit(syncJobResult);
                     syncJobResult.setStatus(SyncJobStatus.QueryChangeLogs);
 
                     if (!(!useLogs || !useLogs.length)) {
-                      _context240.next = 39;
+                      _context240.next = 44;
                       break;
                     }
 
@@ -25605,17 +25643,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                       console.log("DBSyncClientService.sendByJobId(".concat(jobid, ") #548. Keine Client-\xC4nderungen!"));
                     }
 
-                    _context240.next = 38;
+                    _context240.next = 43;
                     return this.getUnsyncedChangeLogsByJobId(useJobid);
 
-                  case 38:
+                  case 43:
                     useLogs = _context240.sent;
 
-                  case 39:
+                  case 44:
                     syncJobResult.numClientChanges = useLogs ? useLogs.length : 0;
 
                     if (!(!useLogs && !ServerInfo.NumChanges)) {
-                      _context240.next = 43;
+                      _context240.next = 48;
                       break;
                     }
 
@@ -25625,7 +25663,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
                     return _context240.abrupt("return", this.finishProcess(syncJobResult, SyncJobStatus.AbortedEmptyChangeLogs));
 
-                  case 43:
+                  case 48:
                     logs = useLogs;
                     syncJobResult.sendClientDeviceId = devid;
                     syncJobResult.committedIds = logs.map(function (itm) {
@@ -25644,43 +25682,43 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                     syncJobLoop = 0;
                     syncJobResult.setStatus(SyncJobStatus.Pending);
 
-                  case 57:
+                  case 62:
                     if (!(!syncJobResult.finished && syncJobLoop < 20)) {
-                      _context240.next = 84;
+                      _context240.next = 89;
                       break;
                     }
 
                     syncJobLoop++;
 
                     if (!(syncJobLoop > 1)) {
-                      _context240.next = 69;
+                      _context240.next = 74;
                       break;
                     }
 
-                    _context240.next = 62;
+                    _context240.next = 67;
                     return this.settings.get(lastRevIdVar);
 
-                  case 62:
-                    _context240.t1 = _context240.sent;
+                  case 67:
+                    _context240.t2 = _context240.sent;
 
-                    if (_context240.t1) {
-                      _context240.next = 65;
+                    if (_context240.t2) {
+                      _context240.next = 70;
                       break;
                     }
 
-                    _context240.t1 = 0;
+                    _context240.t2 = 0;
 
-                  case 65:
-                    lastRevId = _context240.t1;
-                    _context240.next = 68;
+                  case 70:
+                    lastRevId = _context240.t2;
+                    _context240.next = 73;
                     return this.getUnsyncedChangeLogsByJobId(useJobid);
 
-                  case 68:
+                  case 73:
                     logs = _context240.sent;
 
-                  case 69:
+                  case 74:
                     if (!(lastRevIdVar === 'jobid-2-revision-id' && lastRevId === 0)) {
-                      _context240.next = 74;
+                      _context240.next = 79;
                       break;
                     }
 
@@ -25689,7 +25727,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                     alert(_err);
                     return _context240.abrupt("return");
 
-                  case 74:
+                  case 79:
                     if (this.isInDebugMode) {
                       console.log(logTi + " #599. Synchronisations-Loop!", {
                         syncJobLoop: syncJobLoop,
@@ -25703,7 +25741,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                     lastSyncDate = new Date();
                     console.log(logTi + ' #640 Start Sending SyncData to ', "api/sync/syncWithRevisionId/".concat(jobid));
                     syncJobResult.setStatus(SyncJobStatus.Uploading);
-                    _context240.next = 82;
+                    _context240.next = 87;
                     return this.apiService.post("api/sync/syncWithRevisionId/".concat(jobid), {
                       jobid: jobid,
                       devid: devid,
@@ -26086,14 +26124,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                       }));
                     });
 
-                  case 82:
-                    _context240.next = 57;
+                  case 87:
+                    _context240.next = 62;
                     break;
 
-                  case 84:
+                  case 89:
                     this.isInDebugMode = origDebugMode;
 
-                  case 85:
+                  case 90:
                   case "end":
                     return _context240.stop();
                 }
@@ -26141,7 +26179,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             return p;
           })));
           this.processes = this.processes.filter(function (proc) {
-            return !proc.finished;
+            return !proc.finished || proc.status < SyncJobStatus.Uploading && proc.duration > 20000;
           });
           this.processingJobids = this.processes.map(function (proc) {
             return proc.jobid;
