@@ -24809,21 +24809,24 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     (function (SyncJobStatus) {
       SyncJobStatus[SyncJobStatus["Init"] = 0] = "Init";
-      SyncJobStatus[SyncJobStatus["Pending"] = 1] = "Pending";
-      SyncJobStatus[SyncJobStatus["AlreadyStarted"] = 2] = "AlreadyStarted";
-      SyncJobStatus[SyncJobStatus["Offline"] = 3] = "Offline";
-      SyncJobStatus[SyncJobStatus["Aborted"] = 4] = "Aborted";
-      SyncJobStatus[SyncJobStatus["QueryChangeLogs"] = 5] = "QueryChangeLogs";
-      SyncJobStatus[SyncJobStatus["AbortedEmptyChangeLogs"] = 6] = "AbortedEmptyChangeLogs";
-      SyncJobStatus[SyncJobStatus["Uploading"] = 7] = "Uploading";
-      SyncJobStatus[SyncJobStatus["ServerAnswered"] = 8] = "ServerAnswered";
-      SyncJobStatus[SyncJobStatus["ServerAnsweredWithErrors"] = 9] = "ServerAnsweredWithErrors";
-      SyncJobStatus[SyncJobStatus["WriteServerSyncedIds"] = 10] = "WriteServerSyncedIds";
-      SyncJobStatus[SyncJobStatus["WriteServerReChanges"] = 11] = "WriteServerReChanges";
-      SyncJobStatus[SyncJobStatus["WriteServerChanges"] = 12] = "WriteServerChanges";
-      SyncJobStatus[SyncJobStatus["RefreshLogs"] = 13] = "RefreshLogs";
-      SyncJobStatus[SyncJobStatus["FinishedWithErrors"] = 14] = "FinishedWithErrors";
-      SyncJobStatus[SyncJobStatus["Finished"] = 15] = "Finished";
+      SyncJobStatus[SyncJobStatus["AddedToProcessList"] = 1] = "AddedToProcessList";
+      SyncJobStatus[SyncJobStatus["Pending"] = 2] = "Pending";
+      SyncJobStatus[SyncJobStatus["AlreadyStarted"] = 3] = "AlreadyStarted";
+      SyncJobStatus[SyncJobStatus["Offline"] = 4] = "Offline";
+      SyncJobStatus[SyncJobStatus["Aborted"] = 5] = "Aborted";
+      SyncJobStatus[SyncJobStatus["QueryChangeLogs"] = 6] = "QueryChangeLogs";
+      SyncJobStatus[SyncJobStatus["AbortedEmptyChangeLogs"] = 7] = "AbortedEmptyChangeLogs";
+      SyncJobStatus[SyncJobStatus["Online"] = 8] = "Online";
+      SyncJobStatus[SyncJobStatus["AskForServerChanges"] = 9] = "AskForServerChanges";
+      SyncJobStatus[SyncJobStatus["Uploading"] = 10] = "Uploading";
+      SyncJobStatus[SyncJobStatus["ServerAnswered"] = 11] = "ServerAnswered";
+      SyncJobStatus[SyncJobStatus["ServerAnsweredWithErrors"] = 12] = "ServerAnsweredWithErrors";
+      SyncJobStatus[SyncJobStatus["WriteServerSyncedIds"] = 13] = "WriteServerSyncedIds";
+      SyncJobStatus[SyncJobStatus["WriteServerReChanges"] = 14] = "WriteServerReChanges";
+      SyncJobStatus[SyncJobStatus["WriteServerChanges"] = 15] = "WriteServerChanges";
+      SyncJobStatus[SyncJobStatus["RefreshLogs"] = 16] = "RefreshLogs";
+      SyncJobStatus[SyncJobStatus["FinishedWithErrors"] = 17] = "FinishedWithErrors";
+      SyncJobStatus[SyncJobStatus["Finished"] = 18] = "Finished";
     })(SyncJobStatus || (SyncJobStatus = {}));
 
     var SyncJobResult = /*#__PURE__*/function () {
@@ -24984,6 +24987,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             isRunning: false,
             jobStatus: SyncJobStatus.Init
           };
+        }
+      }, {
+        key: "addSyncProcess",
+        value: function addSyncProcess(process) {
+          var logTi = 'DbsyncClientService.addSyncProcess(' + process.jobid + ')';
+          console.log(logTi + ' #330 before add this.processes.length:', this.processes.length);
+          this.processes.push(process);
+          this.processingJobids.push(process.jobid);
+          process.setStatus(SyncJobStatus.AddedToProcessList);
+          console.log(logTi + ' #333 after add this.processes.length:', this.processes.length);
         }
       }, {
         key: "autoSyncIsRunning",
@@ -25520,57 +25533,59 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                     return _context240.abrupt("return", syncJobResult.finish(SyncJobStatus.AlreadyStarted));
 
                   case 12:
-                    this.processingJobids.push(jobid);
-                    this.processes.push(syncJobResult);
+                    this.addSyncProcess(syncJobResult);
 
                     if (!(this.getFullImportJobId() === useJobid)) {
-                      _context240.next = 16;
+                      _context240.next = 15;
                       break;
                     }
 
                     return _context240.abrupt("return", this.finishProcess(syncJobResult, SyncJobStatus.AlreadyStarted, 'Synchronisation wurde abgebrochen, da Import noch läuft!'));
 
-                  case 16:
+                  case 15:
                     if (this.networkService.hasServerAccess) {
-                      _context240.next = 18;
+                      _context240.next = 17;
                       break;
                     }
 
                     return _context240.abrupt("return", this.finishProcess(syncJobResult, SyncJobStatus.Offline, 'Synchronisatioon wurde abgebrochen wegen fehlender Serververbindung!'));
 
-                  case 18:
+                  case 17:
+                    syncJobResult.setStatus(SyncJobStatus.Online);
+
                     if (this.isInDebugMode) {
                       console.log("DbsyncClientServer.sendByJobId(".concat(jobid, ") #525 call askServerForChanges"), new Date().toString());
                     }
 
-                    _context240.next = 21;
+                    syncJobResult.setStatus(SyncJobStatus.AskForServerChanges);
+                    _context240.next = 22;
                     return this.askServerForChanges();
 
-                  case 21:
+                  case 22:
                     ServerInfo = _context240.sent;
                     devid = this.baseData.getCurrentDeviceId() || 0;
                     lastRevIdVar = "jobid-".concat(jobid, "-revision-id");
-                    _context240.next = 26;
+                    _context240.next = 27;
                     return this.settings.get(lastRevIdVar);
 
-                  case 26:
+                  case 27:
                     _context240.t0 = _context240.sent;
 
                     if (_context240.t0) {
-                      _context240.next = 29;
+                      _context240.next = 30;
                       break;
                     }
 
                     _context240.t0 = 0;
 
-                  case 29:
+                  case 30:
                     lastRevId = _context240.t0;
                     syncJobResult.setStatus(SyncJobStatus.Pending);
                     this.processStarted.emit(syncJobResult);
                     syncJobResult.setStatus(SyncJobStatus.QueryChangeLogs);
 
                     if (!(!useLogs || !useLogs.length)) {
-                      _context240.next = 38;
+                      _context240.next = 39;
                       break;
                     }
 
@@ -25578,17 +25593,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                       console.log("DBSyncClientService.sendByJobId(".concat(jobid, ") #548. Keine Client-\xC4nderungen!"));
                     }
 
-                    _context240.next = 37;
+                    _context240.next = 38;
                     return this.getUnsyncedChangeLogsByJobId(useJobid);
 
-                  case 37:
+                  case 38:
                     useLogs = _context240.sent;
 
-                  case 38:
+                  case 39:
                     syncJobResult.numClientChanges = useLogs ? useLogs.length : 0;
 
                     if (!(!useLogs && !ServerInfo.NumChanges)) {
-                      _context240.next = 42;
+                      _context240.next = 43;
                       break;
                     }
 
@@ -25598,7 +25613,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
                     return _context240.abrupt("return", this.finishProcess(syncJobResult, SyncJobStatus.AbortedEmptyChangeLogs));
 
-                  case 42:
+                  case 43:
                     logs = useLogs;
                     syncJobResult.sendClientDeviceId = devid;
                     syncJobResult.committedIds = logs.map(function (itm) {
@@ -25617,43 +25632,43 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                     syncJobLoop = 0;
                     syncJobResult.setStatus(SyncJobStatus.Pending);
 
-                  case 56:
+                  case 57:
                     if (!(!syncJobResult.finished && syncJobLoop < 20)) {
-                      _context240.next = 83;
+                      _context240.next = 84;
                       break;
                     }
 
                     syncJobLoop++;
 
                     if (!(syncJobLoop > 1)) {
-                      _context240.next = 68;
+                      _context240.next = 69;
                       break;
                     }
 
-                    _context240.next = 61;
+                    _context240.next = 62;
                     return this.settings.get(lastRevIdVar);
 
-                  case 61:
+                  case 62:
                     _context240.t1 = _context240.sent;
 
                     if (_context240.t1) {
-                      _context240.next = 64;
+                      _context240.next = 65;
                       break;
                     }
 
                     _context240.t1 = 0;
 
-                  case 64:
+                  case 65:
                     lastRevId = _context240.t1;
-                    _context240.next = 67;
+                    _context240.next = 68;
                     return this.getUnsyncedChangeLogsByJobId(useJobid);
 
-                  case 67:
+                  case 68:
                     logs = _context240.sent;
 
-                  case 68:
+                  case 69:
                     if (!(lastRevIdVar === 'jobid-2-revision-id' && lastRevId === 0)) {
-                      _context240.next = 73;
+                      _context240.next = 74;
                       break;
                     }
 
@@ -25662,7 +25677,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                     alert(_err);
                     return _context240.abrupt("return");
 
-                  case 73:
+                  case 74:
                     if (this.isInDebugMode) {
                       console.log(logTi + " #599. Synchronisations-Loop!", {
                         syncJobLoop: syncJobLoop,
@@ -25676,7 +25691,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                     lastSyncDate = new Date();
                     console.log(logTi + ' #640 Start Sending SyncData to ', "api/sync/syncWithRevisionId/".concat(jobid));
                     syncJobResult.setStatus(SyncJobStatus.Uploading);
-                    _context240.next = 81;
+                    _context240.next = 82;
                     return this.apiService.post("api/sync/syncWithRevisionId/".concat(jobid), {
                       jobid: jobid,
                       devid: devid,
@@ -26059,14 +26074,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                       }));
                     });
 
-                  case 81:
-                    _context240.next = 56;
+                  case 82:
+                    _context240.next = 57;
                     break;
 
-                  case 83:
+                  case 84:
                     this.isInDebugMode = origDebugMode;
 
-                  case 84:
+                  case 85:
                   case "end":
                     return _context240.stop();
                 }

@@ -13815,21 +13815,24 @@ var DBSyncClientService_1;
 var SyncJobStatus;
 (function (SyncJobStatus) {
     SyncJobStatus[SyncJobStatus["Init"] = 0] = "Init";
-    SyncJobStatus[SyncJobStatus["Pending"] = 1] = "Pending";
-    SyncJobStatus[SyncJobStatus["AlreadyStarted"] = 2] = "AlreadyStarted";
-    SyncJobStatus[SyncJobStatus["Offline"] = 3] = "Offline";
-    SyncJobStatus[SyncJobStatus["Aborted"] = 4] = "Aborted";
-    SyncJobStatus[SyncJobStatus["QueryChangeLogs"] = 5] = "QueryChangeLogs";
-    SyncJobStatus[SyncJobStatus["AbortedEmptyChangeLogs"] = 6] = "AbortedEmptyChangeLogs";
-    SyncJobStatus[SyncJobStatus["Uploading"] = 7] = "Uploading";
-    SyncJobStatus[SyncJobStatus["ServerAnswered"] = 8] = "ServerAnswered";
-    SyncJobStatus[SyncJobStatus["ServerAnsweredWithErrors"] = 9] = "ServerAnsweredWithErrors";
-    SyncJobStatus[SyncJobStatus["WriteServerSyncedIds"] = 10] = "WriteServerSyncedIds";
-    SyncJobStatus[SyncJobStatus["WriteServerReChanges"] = 11] = "WriteServerReChanges";
-    SyncJobStatus[SyncJobStatus["WriteServerChanges"] = 12] = "WriteServerChanges";
-    SyncJobStatus[SyncJobStatus["RefreshLogs"] = 13] = "RefreshLogs";
-    SyncJobStatus[SyncJobStatus["FinishedWithErrors"] = 14] = "FinishedWithErrors";
-    SyncJobStatus[SyncJobStatus["Finished"] = 15] = "Finished";
+    SyncJobStatus[SyncJobStatus["AddedToProcessList"] = 1] = "AddedToProcessList";
+    SyncJobStatus[SyncJobStatus["Pending"] = 2] = "Pending";
+    SyncJobStatus[SyncJobStatus["AlreadyStarted"] = 3] = "AlreadyStarted";
+    SyncJobStatus[SyncJobStatus["Offline"] = 4] = "Offline";
+    SyncJobStatus[SyncJobStatus["Aborted"] = 5] = "Aborted";
+    SyncJobStatus[SyncJobStatus["QueryChangeLogs"] = 6] = "QueryChangeLogs";
+    SyncJobStatus[SyncJobStatus["AbortedEmptyChangeLogs"] = 7] = "AbortedEmptyChangeLogs";
+    SyncJobStatus[SyncJobStatus["Online"] = 8] = "Online";
+    SyncJobStatus[SyncJobStatus["AskForServerChanges"] = 9] = "AskForServerChanges";
+    SyncJobStatus[SyncJobStatus["Uploading"] = 10] = "Uploading";
+    SyncJobStatus[SyncJobStatus["ServerAnswered"] = 11] = "ServerAnswered";
+    SyncJobStatus[SyncJobStatus["ServerAnsweredWithErrors"] = 12] = "ServerAnsweredWithErrors";
+    SyncJobStatus[SyncJobStatus["WriteServerSyncedIds"] = 13] = "WriteServerSyncedIds";
+    SyncJobStatus[SyncJobStatus["WriteServerReChanges"] = 14] = "WriteServerReChanges";
+    SyncJobStatus[SyncJobStatus["WriteServerChanges"] = 15] = "WriteServerChanges";
+    SyncJobStatus[SyncJobStatus["RefreshLogs"] = 16] = "RefreshLogs";
+    SyncJobStatus[SyncJobStatus["FinishedWithErrors"] = 17] = "FinishedWithErrors";
+    SyncJobStatus[SyncJobStatus["Finished"] = 18] = "Finished";
 })(SyncJobStatus || (SyncJobStatus = {}));
 class SyncJobResult {
     constructor(jobid) {
@@ -13953,6 +13956,14 @@ let DBSyncClientService = DBSyncClientService_1 = class DBSyncClientService {
             isRunning: false,
             jobStatus: SyncJobStatus.Init
         };
+    }
+    addSyncProcess(process) {
+        const logTi = 'DbsyncClientService.addSyncProcess(' + process.jobid + ')';
+        console.log(logTi + ' #330 before add this.processes.length:', this.processes.length);
+        this.processes.push(process);
+        this.processingJobids.push(process.jobid);
+        process.setStatus(SyncJobStatus.AddedToProcessList);
+        console.log(logTi + ' #333 after add this.processes.length:', this.processes.length);
     }
     autoSyncIsRunning() {
         return this.syncIntervalTimer !== null;
@@ -14175,17 +14186,18 @@ let DBSyncClientService = DBSyncClientService_1 = class DBSyncClientService {
                 syncJobResult.alreadyStartedProcess = jobInProcess;
                 return syncJobResult.finish(SyncJobStatus.AlreadyStarted);
             }
-            this.processingJobids.push(jobid);
-            this.processes.push(syncJobResult);
+            this.addSyncProcess(syncJobResult);
             if (this.getFullImportJobId() === useJobid) {
                 return this.finishProcess(syncJobResult, SyncJobStatus.AlreadyStarted, 'Synchronisation wurde abgebrochen, da Import noch läuft!');
             }
             if (!this.networkService.hasServerAccess) {
                 return this.finishProcess(syncJobResult, SyncJobStatus.Offline, 'Synchronisatioon wurde abgebrochen wegen fehlender Serververbindung!');
             }
+            syncJobResult.setStatus(SyncJobStatus.Online);
             if (this.isInDebugMode) {
                 console.log(`DbsyncClientServer.sendByJobId(${jobid}) #525 call askServerForChanges`, (new Date()).toString());
             }
+            syncJobResult.setStatus(SyncJobStatus.AskForServerChanges);
             const ServerInfo = yield this.askServerForChanges();
             const devid = this.baseData.getCurrentDeviceId() || 0;
             const lastRevIdVar = `jobid-${jobid}-revision-id`;
