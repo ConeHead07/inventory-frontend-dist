@@ -99,7 +99,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"bg\"></div>\r\n<div class=\"container h-100\">\r\n    <div class=\"d-flex justify-content-center h-100\">\r\n      <div class=\"w-100 justify-content-center align-self-center\">\r\n        <div class=\"brand-circle-container\">\r\n          <div class=\"brand-circle-grey\"></div>\r\n        </div>\r\n        <h1><span class=\"lato-black\">Inventory</span><span class=\"lato-light\">App</span></h1>\r\n        <div class=\"user_card user_card_loginbox_bg\">\r\n\r\n            <div class=\"d-flex justify-content-center lato-light mb-2\">\r\n              <h2>Anmeldung</h2>\r\n            </div>\r\n\r\n            <div class=\"d-flex justify-content-center form_container\">\r\n                <form #loginForm=ngForm (ngSubmit)=\"onLoginSubmit()\">\r\n\r\n                    <div class=\"input-group mb-4\">\r\n                        <div class=\"input-group-append\">\r\n                            <span class=\"input-group-text\">\r\n                                <fa-icon [icon]=\"['fa', 'user']\"></fa-icon>\r\n                            </span>\r\n                        </div>\r\n                        <input type=\"text\" class=\"form-control input_user lato-light\" name=\"user\" placeholder=\"Benutzername\"\r\n                            [(ngModel)]=\"form.email\"\r\n                            minlength=\"3\"\r\n                            pattern=\"[a-zA-Z0-9.@-]{3,}\"\r\n                            required\r\n                        >\r\n                    </div>\r\n\r\n                    <div class=\"input-group mb-5\">\r\n                        <div class=\"input-group-append\">\r\n                            <span class=\"input-group-text\">\r\n                                <fa-icon [icon]=\"['fa', 'key']\"></fa-icon>\r\n                            </span>\r\n                        </div>\r\n                        <input required type=\"password\" class=\"form-control input_pass lato-light\" name=\"password\" placeholder=\"Passwort\"\r\n                        [(ngModel)]=\"form.password\"\r\n                        required>\r\n                    </div>\r\n                    <div class=\"d-flex justify-content-center login_container\">\r\n                     <button type=\"button\" name=\"button\" class=\"btn login_btn lato-light\"\r\n                     (click)=\"onLoginSubmit()\"\r\n                     [disabled]=\"loginForm.invalid\">LOGIN</button>\r\n                   </div>\r\n                </form>\r\n            </div>\r\n        </div>\r\n        <div *ngIf=\"error\" class=\"alert alert-danger\" style=\"max-width:90vw\">{{ error }}</div>\r\n      </div>\r\n    </div>\r\n</div>\r\n";
+    __webpack_exports__["default"] = "<div class=\"bg\"></div>\r\n<div class=\"container h-100\">\r\n    <div class=\"d-flex justify-content-center h-100\">\r\n      <div class=\"w-100 justify-content-center align-self-center\">\r\n        <div class=\"brand-circle-container\">\r\n          <div class=\"brand-circle-grey\"></div>\r\n        </div>\r\n        <h1><span class=\"lato-black\">Inventory</span><span class=\"lato-light\">App</span></h1>\r\n        <div class=\"user_card user_card_loginbox_bg\">\r\n\r\n            <div class=\"d-flex justify-content-center lato-light mb-2\">\r\n              <h2>Anmeldung</h2>\r\n            </div>\r\n\r\n            <div class=\"d-flex justify-content-center form_container\">\r\n                <form #loginForm=ngForm (ngSubmit)=\"onLoginSubmit()\">\r\n\r\n                    <div class=\"input-group mb-4\">\r\n                        <div class=\"input-group-append\">\r\n                            <span class=\"input-group-text\">\r\n                                <fa-icon [icon]=\"['fa', 'user']\"></fa-icon>\r\n                            </span>\r\n                        </div>\r\n                        <input type=\"text\" class=\"form-control input_user lato-light\" name=\"user\" placeholder=\"Benutzername\"\r\n                            [(ngModel)]=\"form.email\"\r\n                            minlength=\"3\"\r\n                            pattern=\"[a-zA-Z0-9.@-]{3,}\"\r\n                            required\r\n                        >\r\n                    </div>\r\n\r\n                    <div class=\"input-group mb-5\">\r\n                        <div class=\"input-group-append\">\r\n                            <span class=\"input-group-text\">\r\n                                <fa-icon [icon]=\"['fa', 'key']\"></fa-icon>\r\n                            </span>\r\n                        </div>\r\n                        <input required type=\"password\" class=\"form-control input_pass lato-light\" name=\"password\" placeholder=\"Passwort\"\r\n                        [(ngModel)]=\"form.password\"\r\n                        required>\r\n                    </div>\r\n                    <div class=\"d-flex justify-content-center login_container\">\r\n                     <button type=\"submit\" name=\"button\" class=\"btn login_btn lato-light\"\r\n                     [disabled]=\"loginForm.invalid\">LOGIN</button>\r\n                   </div>\r\n                </form>\r\n            </div>\r\n        </div>\r\n        <div *ngIf=\"error\" class=\"alert alert-danger\" style=\"max-width:90vw\">{{ error }}</div>\r\n      </div>\r\n    </div>\r\n</div>\r\n";
     /***/
   },
 
@@ -1217,7 +1217,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   function packageJson(module) {
-    module.exports = JSON.parse("{\"name\":\"frontend\",\"version\":\"1.0.9707\",\"scripts\":{\"ng\":\"ng\",\"start\":\"ng serve --aot --host 0.0.0.0 --disable-host-check\",\"startssl\":\"ng serve --aot --port 4235 --host inventory.local --disable-host-check --ssl true --sslCert=./ssl/localhost.crt --sslKey=./ssl/localhost.key --open\",\"startssl_test\":\"ng serve --host inventory.local --publicHost inventory.local:4200/sockjs-node --disable-host-check --ssl true --sslCert=./ssl/localhost.crt --sslKey=./ssl/localhost.key\",\"prebuild-xxx\":\"yarn version --patch\",\"build\":\"ng build\",\"build-prod\":\"ng build --output-path=dist/prod --configuration=production\",\"build-rc\":\"ng build --output-path=dist/rc --configuration=rc\",\"build-dev\":\"ng build --output-path=dist/dev --configuration=dev\",\"firebase-deploy-prod\":\"firebase deploy --only hosting:frontend\",\"firebase-deploy-rc\":\"firebase deploy --only hosting:rc\",\"firebase-deploy-dev\":\"firebase deploy --only hosting:dev\",\"firebase-deploy-all\":\"firebase deploy\",\"startpwaOld\":\"http-server -p 4225 -c-1 dist/frontend -S -C ssh_pem/cert.pem -K ssh_pem/key.pem -o\",\"startpwa\":\"http-server -p 4225 -c-1 dist/frontend -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-rc\":\"http-server -p 4245 -c-1 dist/rc -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-dev\":\"http-server -p 4255 -c-1 dist/dev -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-prod\":\"http-server -p 4265 -c-1 dist/prod -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"buildpwa\":\"yarn run prebuild && ng build --prod --project frontend\",\"rebuild\":\"ng build --prod --project frontend\",\"test\":\"ng test\",\"lint\":\"ng lint\",\"e2e\":\"ng e2e\",\"serve-dist\":\"ts-node node-dist-server.ts\",\"serve-dist-js\":\"node node-dist-server.js\"},\"private\":true,\"dependencies\":{\"@angular/animations\":\"~8.2.14\",\"@angular/common\":\"~8.2.14\",\"@angular/compiler\":\"~8.2.14\",\"@angular/core\":\"~8.2.14\",\"@angular/fire\":\"5.4.2\",\"@angular/forms\":\"~8.2.14\",\"@angular/platform-browser\":\"~8.2.14\",\"@angular/platform-browser-dynamic\":\"~8.2.14\",\"@angular/pwa\":\"^0.1000.5\",\"@angular/router\":\"~8.2.14\",\"@angular/service-worker\":\"~8.2.14\",\"@auth0/angular-jwt\":\"^5.0.2\",\"@fortawesome/angular-fontawesome\":\"0.4.0\",\"@fortawesome/fontawesome-svg-core\":\"^1.2.8\",\"@fortawesome/free-brands-svg-icons\":\"^5.5.0\",\"@fortawesome/free-regular-svg-icons\":\"^5.5.0\",\"@fortawesome/free-solid-svg-icons\":\"^5.5.0\",\"@ng-bootstrap/ng-bootstrap\":\"^5.1.5\",\"@types/crypto-js\":\"3.1.47\",\"@zxing/ngx-scanner\":\"^3.0.0\",\"angular-cropperjs\":\"^1.0.2\",\"bootstrap\":\"^4.4.1\",\"browser-image-compression\":\"^1.0.11\",\"compress\":\"^0.99.0\",\"compressorjs\":\"^1.0.6\",\"cropperjs\":\"^1.5.6\",\"crypto-js\":\"3.3.0\",\"dexie\":\"2.0.4\",\"dexie-observable\":\"1.0.0-beta.7\",\"dexie-relationships\":\"^1.2.11\",\"dexie-syncable\":\"1.0.0-beta.6\",\"es6-shim\":\"^0.35.5\",\"express\":\"^4.17.1\",\"express-cors\":\"0.0.3\",\"faker\":\"^4.1.0\",\"firebase\":\">= 5.5.7 <8\",\"global\":\"^4.4.0\",\"guid-typescript\":\"^1.0.9\",\"json-server\":\"^0.15.1\",\"ngx-toastr\":\"10.0.4\",\"ngx-webcam\":\"0.2.6\",\"rxjs\":\"~6.4.0\",\"ts-md5\":\"^1.2.7\",\"tslib\":\"^1.10.0\",\"web-push\":\"^3.4.4\",\"zone.js\":\"~0.9.1\"},\"devDependencies\":{\"@angular-devkit/architect\":\"<0.900 || ^0.900.0-0 || ^9.0.0-0\",\"@angular-devkit/build-angular\":\"^0.803.23\",\"@angular/cli\":\"8.3.0\",\"@angular/compiler-cli\":\"~8.2.14\",\"@angular/language-service\":\"~8.2.14\",\"@types/browser-image-compression\":\"^1.0.1\",\"@types/jasmine\":\"~3.3.8\",\"@types/jasminewd2\":\"~2.0.3\",\"@types/node\":\"^14.14.22\",\"codelyzer\":\"^5.0.0\",\"express-serve-static-core\":\"^0.1.1\",\"firebase-tools\":\"^7.12.0\",\"fuzzy\":\"^0.1.3\",\"inquirer\":\"^6.2.2\",\"inquirer-autocomplete-prompt\":\"^1.0.1\",\"jasmine-core\":\"~3.4.0\",\"jasmine-spec-reporter\":\"~4.2.1\",\"karma\":\"~4.1.0\",\"karma-chrome-launcher\":\"~2.2.0\",\"karma-coverage-istanbul-reporter\":\"~2.0.1\",\"karma-jasmine\":\"~2.0.1\",\"karma-jasmine-html-reporter\":\"^1.4.0\",\"moment\":\"^2.24.0\",\"protractor\":\"~5.4.0\",\"reflect-metadata\":\"^0.1.13\",\"spa-http-server\":\"^0.9.0\",\"ts-node\":\"^8.8.2\",\"tslint\":\"~5.15.0\",\"typescript\":\"~3.5.3\"}}");
+    module.exports = JSON.parse("{\"name\":\"frontend\",\"version\":\"1.0.9709\",\"scripts\":{\"ng\":\"ng\",\"start\":\"ng serve --aot --host 0.0.0.0 --disable-host-check\",\"startssl\":\"ng serve --aot --port 4235 --host inventory.local --disable-host-check --ssl true --sslCert=./ssl/localhost.crt --sslKey=./ssl/localhost.key --open\",\"startssl_test\":\"ng serve --host inventory.local --publicHost inventory.local:4200/sockjs-node --disable-host-check --ssl true --sslCert=./ssl/localhost.crt --sslKey=./ssl/localhost.key\",\"prebuild-xxx\":\"yarn version --patch\",\"build\":\"ng build\",\"build-prod\":\"ng build --output-path=dist/prod --configuration=production\",\"build-rc\":\"ng build --output-path=dist/rc --configuration=rc\",\"build-dev\":\"ng build --output-path=dist/dev --configuration=dev\",\"firebase-deploy-prod\":\"firebase deploy --only hosting:frontend\",\"firebase-deploy-rc\":\"firebase deploy --only hosting:rc\",\"firebase-deploy-dev\":\"firebase deploy --only hosting:dev\",\"firebase-deploy-all\":\"firebase deploy\",\"startpwaOld\":\"http-server -p 4225 -c-1 dist/frontend -S -C ssh_pem/cert.pem -K ssh_pem/key.pem -o\",\"startpwa\":\"http-server -p 4225 -c-1 dist/frontend -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-rc\":\"http-server -p 4245 -c-1 dist/rc -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-dev\":\"http-server -p 4255 -c-1 dist/dev -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"startpwa-prod\":\"http-server -p 4265 -c-1 dist/prod -S -C ssl/public_crt.pem -K ssl/private_key.pem -o\",\"buildpwa\":\"yarn run prebuild && ng build --prod --project frontend\",\"rebuild\":\"ng build --prod --project frontend\",\"test\":\"ng test\",\"lint\":\"ng lint\",\"e2e\":\"ng e2e\",\"serve-dist\":\"ts-node node-dist-server.ts\",\"serve-dist-js\":\"node node-dist-server.js\"},\"private\":true,\"dependencies\":{\"@angular/animations\":\"~8.2.14\",\"@angular/common\":\"~8.2.14\",\"@angular/compiler\":\"~8.2.14\",\"@angular/core\":\"~8.2.14\",\"@angular/fire\":\"5.4.2\",\"@angular/forms\":\"~8.2.14\",\"@angular/platform-browser\":\"~8.2.14\",\"@angular/platform-browser-dynamic\":\"~8.2.14\",\"@angular/pwa\":\"^0.1000.5\",\"@angular/router\":\"~8.2.14\",\"@angular/service-worker\":\"~8.2.14\",\"@auth0/angular-jwt\":\"^5.0.2\",\"@fortawesome/angular-fontawesome\":\"0.4.0\",\"@fortawesome/fontawesome-svg-core\":\"^1.2.8\",\"@fortawesome/free-brands-svg-icons\":\"^5.5.0\",\"@fortawesome/free-regular-svg-icons\":\"^5.5.0\",\"@fortawesome/free-solid-svg-icons\":\"^5.5.0\",\"@ng-bootstrap/ng-bootstrap\":\"^5.1.5\",\"@types/crypto-js\":\"3.1.47\",\"@zxing/ngx-scanner\":\"^3.0.0\",\"angular-cropperjs\":\"^1.0.2\",\"bootstrap\":\"^4.4.1\",\"browser-image-compression\":\"^1.0.11\",\"compress\":\"^0.99.0\",\"compressorjs\":\"^1.0.6\",\"cropperjs\":\"^1.5.6\",\"crypto-js\":\"3.3.0\",\"dexie\":\"2.0.4\",\"dexie-observable\":\"1.0.0-beta.7\",\"dexie-relationships\":\"^1.2.11\",\"dexie-syncable\":\"1.0.0-beta.6\",\"es6-shim\":\"^0.35.5\",\"express\":\"^4.17.1\",\"express-cors\":\"0.0.3\",\"faker\":\"^4.1.0\",\"firebase\":\">= 5.5.7 <8\",\"global\":\"^4.4.0\",\"guid-typescript\":\"^1.0.9\",\"json-server\":\"^0.15.1\",\"ngx-toastr\":\"10.0.4\",\"ngx-webcam\":\"0.2.6\",\"rxjs\":\"~6.4.0\",\"ts-md5\":\"^1.2.7\",\"tslib\":\"^1.10.0\",\"web-push\":\"^3.4.4\",\"zone.js\":\"~0.9.1\"},\"devDependencies\":{\"@angular-devkit/architect\":\"<0.900 || ^0.900.0-0 || ^9.0.0-0\",\"@angular-devkit/build-angular\":\"^0.803.23\",\"@angular/cli\":\"8.3.0\",\"@angular/compiler-cli\":\"~8.2.14\",\"@angular/language-service\":\"~8.2.14\",\"@types/browser-image-compression\":\"^1.0.1\",\"@types/jasmine\":\"~3.3.8\",\"@types/jasminewd2\":\"~2.0.3\",\"@types/node\":\"^14.14.22\",\"codelyzer\":\"^5.0.0\",\"express-serve-static-core\":\"^0.1.1\",\"firebase-tools\":\"^7.12.0\",\"fuzzy\":\"^0.1.3\",\"inquirer\":\"^6.2.2\",\"inquirer-autocomplete-prompt\":\"^1.0.1\",\"jasmine-core\":\"~3.4.0\",\"jasmine-spec-reporter\":\"~4.2.1\",\"karma\":\"~4.1.0\",\"karma-chrome-launcher\":\"~2.2.0\",\"karma-coverage-istanbul-reporter\":\"~2.0.1\",\"karma-jasmine\":\"~2.0.1\",\"karma-jasmine-html-reporter\":\"^1.4.0\",\"moment\":\"^2.24.0\",\"protractor\":\"~5.4.0\",\"reflect-metadata\":\"^0.1.13\",\"spa-http-server\":\"^0.9.0\",\"ts-node\":\"^8.8.2\",\"tslint\":\"~5.15.0\",\"typescript\":\"~3.5.3\"}}");
     /***/
   },
 
@@ -2240,7 +2240,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           this.isLoading = true;
           auth = this.authService.login(email, password);
           auth.then(function (resData) {
-            console.log(resData);
             _this5.isLoading = false;
 
             _this5.router.navigate(['/select-inventory']);
@@ -2488,6 +2487,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                         created_at: new Date()
                       });
 
+                      _this6.handleAuthentication(email, resData.auth_identifier, resData.access_token, +resData.expires_in, +resData.clientDeviceId, pwHash);
+
                       _this6.apiService.get('auth/me').toPromise().then(function (me) {
                         if ('password' in me) {
                           delete me.password;
@@ -2495,8 +2496,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
                         _this6.userService.update(me.id, me);
                       });
-
-                      _this6.handleAuthentication(email, resData.auth_identifier, resData.access_token, +resData.expires_in, +resData.clientDeviceId, pwHash);
                     })).toPromise());
 
                   case 20:
@@ -3103,6 +3102,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                     } else {
                       console.log('Synchronisierung läuft nicht ...');
                       this.syncStatus = _shared_services_dbsync_client_service__WEBPACK_IMPORTED_MODULE_2__["SyncJobStatus"].Init;
+                      this.syncStatusName = '';
                       this.syncFinished = true;
                       this.syncInProcess = false;
                     }
@@ -3158,12 +3158,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "cancelCurrJob",
         value: function cancelCurrJob() {
           this.dbsyncClient.removeSyncProcessByJobid(this.jobid);
-          this.currProcess = this.dbsyncClient.getProcessByJobId(this.jobid);
+          this.refreshStatusInfos();
         }
       }, {
         key: "forceSendCurrJob",
         value: function forceSendCurrJob() {
-          this.dbsyncClient.sendByJobId(this.jobid, null, null, true);
+          this.cancelCurrJob();
+          this.dbsyncClient.sendByJobId(this.jobid, [], null, true);
         }
       }, {
         key: "syncCurrJob",
@@ -25015,11 +25016,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "removeSyncProcessByJobid",
         value: function removeSyncProcessByJobid(jobid) {
           var reason = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
-          var proc = this.getProcessByJobId(jobid);
+          this.processes = this.processes.filter(function (p) {
+            if (p.jobid === jobid) {
+              p.finish(SyncJobStatus.Aborted, 'Abbruch');
+            }
 
-          if (proc) {
-            this.finishProcess(proc, SyncJobStatus.Aborted, '');
-          }
+            return p.jobid !== jobid;
+          });
+          this.processingJobids = this.processes.map(function (proc) {
+            return proc.jobid;
+          });
         }
       }, {
         key: "autoSyncIsRunning",
@@ -25094,6 +25100,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                     return _context228.abrupt("return");
 
                   case 6:
+                    if (this.networkService.getCurrentState().hasValidSession) {
+                      _context228.next = 9;
+                      break;
+                    }
+
+                    console.error(logTi + ' #400 ABORT No-Valid-Session');
+                    return _context228.abrupt("return");
+
+                  case 9:
                     isDBSyncService = this instanceof DBSyncClientService_1;
 
                     if (this.isInDebugMode) {
@@ -25103,22 +25118,22 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                     }
 
                     if (isDBSyncService) {
-                      _context228.next = 11;
+                      _context228.next = 14;
                       break;
                     }
 
                     console.error(logTi + ' #387 this is not correct binded to Instance of DBSyncClientService');
                     return _context228.abrupt("return");
 
-                  case 11:
+                  case 14:
                     if (this.isInDebugMode) {
                       console.log(logTi + ' #392 call getIncompleteInventuren()');
                     }
 
-                    _context228.next = 14;
+                    _context228.next = 17;
                     return this.getIncompleteInventuren();
 
-                  case 14:
+                  case 17:
                     incompleteInventurLogs = _context228.sent;
                     console.log(logTi + ' #389 all changes', incompleteInventurLogs.reduce(function (carry, job) {
                       return carry + job.changes.length;
@@ -25132,7 +25147,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                     }
 
                     if (!(currJobIdx !== -1)) {
-                      _context228.next = 27;
+                      _context228.next = 30;
                       break;
                     }
 
@@ -25143,75 +25158,75 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                     currJob = incompleteInventurLogs[currJobIdx];
                     incompleteInventurLogs = incompleteInventurLogs.slice(currJobIdx, 1);
                     console.log(logTi + ' #407 call sendByJobId(', currJob.jobid, currJob.changes, ')');
-                    _context228.next = 25;
+                    _context228.next = 28;
                     return this.sendByJobId(currJob.jobid, currJob.changes);
 
-                  case 25:
-                    _context228.next = 28;
+                  case 28:
+                    _context228.next = 31;
                     break;
 
-                  case 27:
+                  case 30:
                     console.log(logTi + ' #410 no changes of currJobId(' + currJobId + ')');
 
-                  case 28:
+                  case 31:
                     _iterator11 = _createForOfIteratorHelper(incompleteInventurLogs);
-                    _context228.prev = 29;
+                    _context228.prev = 32;
 
                     _iterator11.s();
 
-                  case 31:
+                  case 34:
                     if ((_step11 = _iterator11.n()).done) {
-                      _context228.next = 40;
+                      _context228.next = 43;
                       break;
                     }
 
                     logs = _step11.value;
 
                     if (!(logs.jobid === currJobId)) {
-                      _context228.next = 35;
+                      _context228.next = 38;
                       break;
                     }
 
-                    return _context228.abrupt("continue", 38);
+                    return _context228.abrupt("continue", 41);
 
-                  case 35:
+                  case 38:
                     if (this.isInDebugMode) {
                       console.log(logTi + ' #418 call sendByJobId(', logs.jobid, logs.changes, ')');
                     }
 
-                    _context228.next = 38;
+                    _context228.next = 41;
                     return this.sendByJobId(logs.jobid, logs.changes);
 
-                  case 38:
-                    _context228.next = 31;
+                  case 41:
+                    _context228.next = 34;
                     break;
 
-                  case 40:
-                    _context228.next = 45;
+                  case 43:
+                    _context228.next = 48;
                     break;
-
-                  case 42:
-                    _context228.prev = 42;
-                    _context228.t0 = _context228["catch"](29);
-
-                    _iterator11.e(_context228.t0);
 
                   case 45:
                     _context228.prev = 45;
+                    _context228.t0 = _context228["catch"](32);
+
+                    _iterator11.e(_context228.t0);
+
+                  case 48:
+                    _context228.prev = 48;
 
                     _iterator11.f();
 
-                    return _context228.finish(45);
+                    return _context228.finish(48);
 
-                  case 48:
+                  case 51:
                     console.log(logTi + ' #423 END');
 
-                  case 49:
+                  case 52:
                   case "end":
                     return _context228.stop();
                 }
               }
-            }, _callee226, this, [[29, 42, 45, 48]]);
+            }, _callee226, this, [[32, 45, 48, 51]]);
           }));
         }
       }, {
@@ -25795,6 +25810,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                                   serverChanges: data.serverChanges.rows ? data.serverChanges.rows.length : 0
                                 });
                                 console.log(logTi + ' #577 Process sync_done');
+                                syncJobResult.setStatus(SyncJobStatus.WriteServerSyncedIds);
 
                                 if (!(data.aSyncedChangeIds && data.aSyncedChangeIds.length > 0)) {
                                   _context239.next = 23;
@@ -25802,7 +25818,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                                 }
 
                                 syncLogMsg('Entferne vom Server bestätige Client-Logs ...');
-                                syncJobResult.setStatus(SyncJobStatus.WriteServerSyncedIds);
                                 _context239.next = 21;
                                 return this.dexieService.clientChangeLog.where('id').anyOf(data.aSyncedChangeIds).modify({
                                   sync_done: 1
@@ -25867,6 +25882,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
                               case 46:
                                 console.log(logTi + ' #603 Process serverRechanges');
+                                syncJobResult.setStatus(SyncJobStatus.WriteServerReChanges);
 
                                 if (!(data.serverRechanges && data.serverRechanges.length > 0)) {
                                   _context239.next = 52;
@@ -25874,7 +25890,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                                 }
 
                                 syncLogMsg('Korrigiere Client-Ids nach Server-Antwort ...');
-                                syncJobResult.setStatus(SyncJobStatus.WriteServerReChanges);
                                 _context239.next = 52;
                                 return Promise.all(data.serverRechanges.map(function (chg) {
                                   return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this143, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee236() {
@@ -25902,13 +25917,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                                   console.log(logTi + ' #614 Process serverChanges');
                                 }
 
+                                syncJobResult.setStatus(SyncJobStatus.WriteServerChanges);
+
                                 if (!(data.serverChanges.rows && data.serverChanges.rows.length > 0)) {
                                   _context239.next = 108;
                                   break;
                                 }
 
                                 syncLogMsg('Import Server-Changes ...');
-                                syncJobResult.setStatus(SyncJobStatus.WriteServerChanges);
                                 chgLen = data.serverChanges.rows.length;
                                 ci = 0;
 
@@ -26113,9 +26129,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                               case 122:
                                 console.log(logTi + ' #744 finish SyncProcess(jobid: ' + syncJobResult.jobid + ')');
                                 syncLogMsg('Aktuelle Synchronisation wurde abgeschlossen');
-                                return _context239.abrupt("return", this.finishProcess(syncJobResult, SyncJobStatus.Finished));
+                                syncJobResult.setStatus(SyncJobStatus.Finished);
+                                this.finishProcess(syncJobResult, SyncJobStatus.Finished);
+                                return _context239.abrupt("return", syncJobResult);
 
-                              case 125:
+                              case 127:
                               case "end":
                                 return _context239.stop();
                             }
@@ -26179,7 +26197,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             return p;
           })));
           this.processes = this.processes.filter(function (proc) {
-            return !proc.finished || proc.status < SyncJobStatus.Uploading && proc.duration > 20000;
+            if (proc.finished) {
+              return false;
+            }
+
+            if (proc.status < SyncJobStatus.Uploading && proc.duration > 20000) {
+              proc.finish(SyncJobStatus.Aborted);
+              return false;
+            }
+
+            return true;
           });
           this.processingJobids = this.processes.map(function (proc) {
             return proc.jobid;
@@ -26276,7 +26303,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                       jobid: jobid
                     }).filter(function (itm) {
                       return !('sync_done' in itm) || itm.sync_done === 0;
-                    }).toArray().then(function (list) {
+                    }).limit(30).sortBy('id').then(function (list) {
                       return _this144.sortAndFixChangeLogs(list);
                     }));
 
