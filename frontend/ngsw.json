@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1621553682570,
+  "timestamp": 1630449523189,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -10,14 +10,14 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main-es2015.0ac5cf8b813e7f3e4e9d.js",
-        "/main-es5.0ac5cf8b813e7f3e4e9d.js",
+        "/main-es2015.87b5c8c15c9ed2dacba3.js",
+        "/main-es5.87b5c8c15c9ed2dacba3.js",
         "/manifest.webmanifest",
         "/polyfills-es2015.e04c183f50820e591f59.js",
         "/polyfills-es5.4f39b8044fe60aac5d2e.js",
         "/runtime-es2015.528eac4c059023231e5e.js",
         "/runtime-es5.528eac4c059023231e5e.js",
-        "/styles.f1169d8befd1bbf667db.css"
+        "/styles.1cd7529b85829ec12f68.css"
       ],
       "patterns": []
     },
@@ -51,6 +51,7 @@
         "/Lato-Regular.ba0cc8b032cbbab84a9c.ttf",
         "/Lato-Regular.e87e43c57f21dd637791.woff",
         "/Lato-Regular.fb529b5c4d5892b07fa3.eot",
+        "/assets/client-config.local.json",
         "/assets/fonts/Lato-Black.eot",
         "/assets/fonts/Lato-Black.svg",
         "/assets/fonts/Lato-Black.ttf",
@@ -138,6 +139,7 @@
     "/Lato-Regular.ba0cc8b032cbbab84a9c.ttf": "a1dd6019271f855733041db0c5c5ff71eddcf4a6",
     "/Lato-Regular.e87e43c57f21dd637791.woff": "e9ba8d804e2251213fb5d1f9e59017e0c0765b52",
     "/Lato-Regular.fb529b5c4d5892b07fa3.eot": "11ba4fa1b52c35ccc86aacf8d6bf87cea30af31c",
+    "/assets/client-config.local.json": "8b37008babbcacde237f13abc94297d492f87b2c",
     "/assets/fonts/Lato-Black.eot": "b28fb70425a6c7b28e320791b286775e05bd87ce",
     "/assets/fonts/Lato-Black.svg": "93853d0a4b71700578b57b5f673cd49945c6368c",
     "/assets/fonts/Lato-Black.ttf": "2831151e242bf2f55f2e2c69cba3dd165eaf23c7",
@@ -195,15 +197,15 @@
     "/assets/mertens-logo-221x45.png": "9df198b7d69d28cbc78ec21cdf37896865ab33ff",
     "/assets/mertens-logo.png": "f4256097d34d6239a0a4c3ff8ded49fe3ba73d35",
     "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/index.html": "ea7bdb17b8a69b8bf40dc6fb5ff7a85b5fddd363",
-    "/main-es2015.0ac5cf8b813e7f3e4e9d.js": "5dfa31208ac27d727058cb74a0f9edd12a48e89e",
-    "/main-es5.0ac5cf8b813e7f3e4e9d.js": "961b1a43aad99ed23f65259207cb1b838a96b31f",
+    "/index.html": "5f45f26b9c2690bbab9f68dc70d035e52894619e",
+    "/main-es2015.87b5c8c15c9ed2dacba3.js": "702840fc795068eb46f8505337308c15a9d02503",
+    "/main-es5.87b5c8c15c9ed2dacba3.js": "e755a1045c905690aad13963ed544444b002458c",
     "/manifest.webmanifest": "0525a045ed472918dea972e744b31758ac30393b",
     "/polyfills-es2015.e04c183f50820e591f59.js": "9abfe15f17820a646e3d51c420908d9f8f7b69b8",
     "/polyfills-es5.4f39b8044fe60aac5d2e.js": "ff1a30ceb76e72a7911e893de6b7981cd5354180",
     "/runtime-es2015.528eac4c059023231e5e.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
     "/runtime-es5.528eac4c059023231e5e.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "/styles.f1169d8befd1bbf667db.css": "6239cb5adea34c00b7f90fe8e749e952bc9b435b"
+    "/styles.1cd7529b85829ec12f68.css": "6239cb5adea34c00b7f90fe8e749e952bc9b435b"
   },
   "navigationUrls": [
     {
