@@ -1,0 +1,6 @@
+{
+  "ApiUrlLive": "https://loreal.mertens.services/",
+  "ApiUrlLocal": "https://inventory.local:8040/",
+  "ApiUrl": "https://loreal.mertens.services/"
+}
+

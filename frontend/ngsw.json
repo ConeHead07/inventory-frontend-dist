@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1641319178999,
+  "timestamp": 1641383486310,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -10,8 +10,8 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main-es2015.7ef3f4e22786c4675d88.js",
-        "/main-es5.7ef3f4e22786c4675d88.js",
+        "/main-es2015.e65894a31897866f90ff.js",
+        "/main-es5.e65894a31897866f90ff.js",
         "/manifest.webmanifest",
         "/polyfills-es2015.e04c183f50820e591f59.js",
         "/polyfills-es5.4f39b8044fe60aac5d2e.js",
@@ -51,6 +51,7 @@
         "/Lato-Regular.ba0cc8b032cbbab84a9c.ttf",
         "/Lato-Regular.e87e43c57f21dd637791.woff",
         "/Lato-Regular.fb529b5c4d5892b07fa3.eot",
+        "/assets/client-config.local.json",
         "/assets/fonts/Lato-Black.eot",
         "/assets/fonts/Lato-Black.svg",
         "/assets/fonts/Lato-Black.ttf",
@@ -138,6 +139,7 @@
     "/Lato-Regular.ba0cc8b032cbbab84a9c.ttf": "a1dd6019271f855733041db0c5c5ff71eddcf4a6",
     "/Lato-Regular.e87e43c57f21dd637791.woff": "e9ba8d804e2251213fb5d1f9e59017e0c0765b52",
     "/Lato-Regular.fb529b5c4d5892b07fa3.eot": "11ba4fa1b52c35ccc86aacf8d6bf87cea30af31c",
+    "/assets/client-config.local.json": "a62fb3c26b88e334b739908802960a593a544722",
     "/assets/fonts/Lato-Black.eot": "b28fb70425a6c7b28e320791b286775e05bd87ce",
     "/assets/fonts/Lato-Black.svg": "93853d0a4b71700578b57b5f673cd49945c6368c",
     "/assets/fonts/Lato-Black.ttf": "2831151e242bf2f55f2e2c69cba3dd165eaf23c7",
@@ -195,9 +197,9 @@
     "/assets/mertens-logo-221x45.png": "9df198b7d69d28cbc78ec21cdf37896865ab33ff",
     "/assets/mertens-logo.png": "f4256097d34d6239a0a4c3ff8ded49fe3ba73d35",
     "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/index.html": "4f9a9e61c6ec18157341ff99774a513cdf13ba94",
-    "/main-es2015.7ef3f4e22786c4675d88.js": "8d557a6d9c5e9e534d0bad7419d020eb00131528",
-    "/main-es5.7ef3f4e22786c4675d88.js": "3eeb73a4e3b5d7afa17eca169698665786e2cc5a",
+    "/index.html": "eba5207b6f222671f5057084a02df2251bd7bc65",
+    "/main-es2015.e65894a31897866f90ff.js": "d02aa9cd1f5e167dee4381270ab91180961ac2f9",
+    "/main-es5.e65894a31897866f90ff.js": "1215963884d884e2af851c3124641fa705f991e3",
     "/manifest.webmanifest": "0525a045ed472918dea972e744b31758ac30393b",
     "/polyfills-es2015.e04c183f50820e591f59.js": "9abfe15f17820a646e3d51c420908d9f8f7b69b8",
     "/polyfills-es5.4f39b8044fe60aac5d2e.js": "ff1a30ceb76e72a7911e893de6b7981cd5354180",
